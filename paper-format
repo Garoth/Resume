@@ -31,7 +31,7 @@
 
 @Use { @BasicSetup
   # @InitialFont	{ Times Base 12p	} # initial font
-   @InitialBreak	{adjust 1.8fx hyphen}
+  # @InitialBreak	{adjust 1.8fx hyphen}
   # @InitialOutdent	{ 2f @OrIfPlain 4s	} # initial outdent
   # @InitialSpace	{ lout			} # initial space style
   # @InitialLanguage	{ English		} # initial language
@@ -78,12 +78,12 @@
    @PageHeight		{ 11i			} # page height if type Other
   # @PageOrientation	{ Portrait		} # Portrait, Landscape, etc.
   # @PageBackground	{  			} # background of each page
-   @TopMargin		{ 1.8i } # top margin of all pages
-   @FootMargin		{ 1.8i } # bottom margin of all pages
-   @OddLeftMargin	{ 1.8i } # left margin of odd pages
-   @OddRightMargin	{ 1.8i } # right margin of odd pages
-   @EvenLeftMargin	{ 1.8i } # left margin of even pages
-   @EvenRightMargin	{ 1.8i } # right margin of even pages
+   @TopMargin		{ 1.4i } # top margin of all pages
+   @FootMargin		{ 1.4i } # bottom margin of all pages
+   @OddLeftMargin	{ 1.4i } # left margin of odd pages
+   @OddRightMargin	{ 1.4i } # right margin of odd pages
+   @EvenLeftMargin	{ 1.4i } # left margin of even pages
+   @EvenRightMargin	{ 1.4i } # right margin of even pages
   # @OddLeftBodyMargin	{ 0c			} # extra margin for page body
   # @OddRightBodyMargin	{ 0c			} # extra margin for page body
   # @EvenLeftBodyMargin	{ 0c			} # extra margin for page body

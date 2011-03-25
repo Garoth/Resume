@@ -1,6 +1,123 @@
+@SysInclude{math}
 @Include{paper-format}
 
 @Doc @Text @Begin
 
+|1rt {
+@OneRow{
+        1w @HShift 0w @VShift 3 @Scale {Andrei Thorp}
+/0.5f   1w @HShift {@S {University of Waterloo}}
+/0.5f   1w @HShift {garoth.com}
+/0.5f   1w @HShift {519-998-5110}
+/0.5f   1w @HShift {garoth@gmail.com}
+/0.5f   {1w @HShift {133 Timber Mill Ave.,}
+/0.5f      1w @HShift {Whitby, ON, Canada}
+/0.5f      1w @HShift {L1R 2H4}}
+}
+|0.8f
+-90d @Rotate { 1.6 @Scale {Computer Science} }
+}
+
+//3f
+
+90d @Rotate 1.6 @Scale 1w @HShift @S {Skill Set}
+|2f @OneRow {
+          {1.4 @Scale 0w @VShift @I {Languages From Jobs}
+    //1f |1.5f 0w @VShift{/0.1f Python, Java, C, Bash, XHTML, CSS}}
+
+    //2f {1.4 @Scale 0w @VShift @I {Notable APIs}
+    //1f |1.5f 0w @VShift{/0.1f Google Web Toolkit (GWT), GIMP Toolkit (GTK), Cairo, DBus, Hardware Abstraction Layer (HAL), Sqlite, Python Twisted, C pthreads"/"sockets, Various standard libraries}}
+
+    //2f {1.4 @Scale 0w @VShift @I {Art}
+    //1f |1.5f 0w @VShift{/0.1f Blender 3D, traditional mediums (ex. pencils, conte, watercolour), digital graphics tablet, vector graphics (Inkscape), logos, layout design. See end for links to galleries.}}
+
+    //2f {1.4 @Scale 0w @VShift @I {English}
+    //1f |1.5f 0w @VShift{/0.1f Private tutoring, very top grades in high school English, English award upon completion of grade 8}}
+}
+
+//3f
+
+90d @Rotate 1.6 @Scale 1w @HShift @S {Education}
+|2f @OneRow {
+          {1.4 @Scale 0w @VShift @I {2007 @M{-->} Present}
+    //1f |1.5f 0w @VShift{/0.1f Candidate for Bachelor of Computer Science Degree, /0.5f University of Waterloo}}
+
+    //2f {1.4 @Scale 0w @VShift @I {2001 @M{-->} 2004}
+    //1f |1.5f 0w @VShift{/0.1f Private English Tutoring (Helen Coles, Masters' degree holder)}}
+
+    //2f {1.4 @Scale 0w @VShift @I {2001 @M{-->} 2005}
+    //1f |1.5f 0w @VShift{/0.1f Private Art Tutoring (Alla Berdichevskaya, highschool art teacher)}}
+}
+
+//3f
+
+90d @Rotate 1.6 @Scale 1w @HShift @S {Work Experience}
+|2f @OneRow {
+          1.2 @Scale 0w @VShift {[Winter 2011] Kernel "/" Linux Products Team /0.8f "@" Wind River (subst. Intel)}
+    //1f |1.5f 0w @VShift{/0.1f Wind River is best known for the realtime vxWorks operating system. At Wind River, I wrote C code for a system that allows for two-way communication between different virtual machines on the same physical hardware. This is done via shared memory and aims to provide a Linux frontend to realtime vxWorks applications. The system includes threading, sockets, careful memory management, kernel modules, virtualization, and patches for core linux utils such as ps and top. I worked primarily in userspace.}
+
+    //2f  1.2 @Scale 0w @VShift {[Spring 2010] Web Programming in Google Web Toolkit /0.8f "@" GridCentric Inc.}
+    //1f |1.5f 0w @VShift{/0.1f GridCentric provides quality virtual clustering technology. The GridCentric system includes an interactive web interface that can control and monitor the virtual clusters on the network. I spent 4 months rewriting and improving the web interface, resulting in clearer code, greatly improved efficiency, better security, and 10,000 less lines of code. Additionally, I created graphics for GridCentric's wiki and helped design the logo for the product "Copper." See end for link to GridCentric's wiki for screenshots of my work.}
+}
+//2f
+|3f {
+
+    1.2 @Scale 0w @VShift {[Summer 2009] Creation of a Job Distribution System /0.8f "@" Xandros Corp.}
+    //1f |1.5f 0w @VShift{/0.1f I designed and implemented a package automation system in Python. This system manages several package creation servers over the network via small daemons. It is capable of starting, stopping, and monitoring running jobs remotely. Additionally, it features a custom network protocol and stores job runtime averages.}
+
+    //2f 1.2 @Scale 0w @VShift {[Winter 2008] Package Management Automation, Internationalization /0.8f "@" Xandros Corp.}
+    //1f |1.5f 0w @VShift{/0.1f Xandros built Linux distributions. Thus, many Debian packages needed to be rebuilt regularly and managed. I rewrote, fixed, and improved the automation framework which was written in shell script and Perl. Additionally, I wrote several medium sized scripts to help find and merge internationalization files.}
+
+    //2f 1.2 @Scale 0w @VShift {[Spring 2008] Database Abstraction, DBus (IPC), Graphical UI /0.8f "@" Pacific "&" Western Bank "/" VersaBanq Innovations Inc.}
+    //1f |1.5f 0w @VShift{/0.1f I contributed to the Versaplex project, which aims to create a database abstraction layer. I also rewrote part of a Dbus (inter-process communications system) implementation  for C"#". Finally, I created a graphical program to easily interface with SQL databases via Versaplex (See end for link to images "/" explanation).}
+
+}
+//2f
+|3f {
+
+    1.2 @Scale 0w @VShift {[Summer 2006 (highschool)] Database Cleaning "&" Scripting /0.8f "@" Advanced Chemistry Development Labs}
+    //1f |1.5f 0w @VShift{/0.1f I re-organized large portions of the company's MSSQL database manually so that it was possible to look further back into customer history. I also made a convenience program that would take data from hundreds of commonly-structured e-mails and put the relevant information into an SQL table.}
+
+    //2f 1.2 @Scale 0w @VShift {[Summer 2005 (highschool)] Database Entry /0.8f "@" Advanced Chemistry Development Labs}
+    //1f |1.5f 0w @VShift{/0.1f I sorted through the old paper records for purchases and maintenance subscriptions, and put them into CRM (Customer Relationship Management) software. I also organized old digital entries.}
+}
+
+//3f
+
+90d @Rotate 1.6 @Scale 1w @HShift @S {Open Source "&" Other Projects}
+|2f @OneRow {
+          {1.4 @Scale 0w @VShift @I {Open Source Contributions}
+    //1f |1.5f 0w @VShift{/0.1f Submitted improvements to ``Avant Window Navigator,'' ``Awesome WM,'' and ``Tremulous.'' Active in the open source community since 2004.}}
+
+    //2f {1.4 @Scale 0w @VShift @I {Package Maintenence}
+    //1f |1.5f 0w @VShift{/0.1f Maintain several ``universe'' packages for the ``Arch Linux'' distribution and routinely deal with other maintainers to suggest and help with improvements.}}
+
+    //2f {1.4 @Scale 0w @VShift @I {Open Source Projects}
+    //1f |1.5f 0w @VShift{/0.1f Founder of the ``Obvious'' widget library for ``Awesome WM.'' Created ``gem2arch'' program to generate Arch Linux packages from Ruby Gems (officially included in next version of Arch Linux pkgtools). Written IRC Bots, little known games, and many small scripts.}}
+
+    //2f {1.4 @Scale 0w @VShift @I {ForestOfThought.com "&" Garoth.com}
+    //1f |1.5f 0w @VShift{/0.1f These are my personal blogs. Forest Of Thought is a now unmaintained site for philosophical writings. Garoth.com is my main homepage and blog, largely for project announcements.}}
+}
+
+//3f
+
+90d @Rotate 1.6 @Scale 1w @HShift @S {Links}
+|2f @OneRow {
+
+         {1.4 @Scale 0w @VShift @I {GridCentric GWT Web Interface}
+    //1f |1.5f 0w @VShift{/0.1f "http://wiki.gridcentriclabs.com/index.php?title=AdminConsole"}}
+
+    //2f {1.4 @Scale 0w @VShift @I {VersaBanq GTK User Interface}
+    //1f |1.5f 0w @VShift{/0.1f "http://garoth.com/?p=49"}}
+
+    //2f {1.4 @Scale 0w @VShift @I {3D Art}
+    //1f |1.5f 0w @VShift{/0.1f "http://picasaweb.google.com/garoth/3DArt"}}
+
+    //2f {1.4 @Scale 0w @VShift @I {Other Art}
+    //1f |1.5f 0w @VShift{/0.1f "http://garoth.com/?cat=7" /0.8f "http://picasaweb.google.com/garoth/GraphicArts"}}
+
+    //2f {1.4 @Scale 0w @VShift @I {Plutocracy, An Original Game Project}
+    //1f |1.5f 0w @VShift{/0.1f "http://plutocracy.googlecode.com/" /0.8f "http://garoth.com/?cat=12"}}
+}
 
 @End @Text
