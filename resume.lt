@@ -18,12 +18,12 @@
 -90d @Rotate { 1.6 @Scale {Computer Science} }
 }
 
-//3f
+//6f
 
 90d @Rotate 1.6 @Scale 1w @HShift @S {Skill Set}
 |2f @OneRow {
           {1.4 @Scale 0w @VShift @I {Languages From Jobs}
-    //1f |1.5f 0w @VShift{/0.1f Python, Java, C, Bash, XHTML, CSS}}
+    //1f |1.5f 0w @VShift{/0.1f Python, Java, C, Bash, XHTML, CSS, C"#" 0.8 @Scale (rusty)}}
 
     //2f {1.4 @Scale 0w @VShift @I {Notable APIs}
     //1f |1.5f 0w @VShift{/0.1f Google Web Toolkit (GWT), GIMP Toolkit (GTK), Cairo, DBus, Hardware Abstraction Layer (HAL), Sqlite, Python Twisted, C pthreads"/"sockets, Various standard libraries}}
@@ -53,32 +53,32 @@
 
 90d @Rotate 1.6 @Scale 1w @HShift @S {Work Experience}
 |2f @OneRow {
-          1.2 @Scale 0w @VShift {[Winter 2011] Kernel "/" Linux Products Team /0.8f "@" Wind River (subst. Intel)}
-    //1f |1.5f 0w @VShift{/0.1f Wind River is best known for the realtime vxWorks operating system. At Wind River, I wrote C code for a system that allows for two-way communication between different virtual machines on the same physical hardware. This is done via shared memory and aims to provide a Linux frontend to realtime vxWorks applications. The system includes threading, sockets, careful memory management, kernel modules, virtualization, and patches for core linux utils such as ps and top. I worked primarily in userspace.}
+          1.2 @Scale 0w @VShift {[Winter 2011] Kernel "/" Linux Products Team /0.8f "@" Wind River (subs. Intel) 0.6 @Scale{Waterloo Employer Satisfaction: Term Incomplete}}
+    //1f |1.5f 0w @VShift{/0.1f Wind River is best known for the realtime vxWorks operating system. At Wind River, I wrote C code for a system that allows for two-way communication between different virtual machines on the same physical hardware. This is done via shared memory and aims to provide a Linux frontend to realtime vxWorks applications. The system includes threading, sockets, careful memory management, kernel modules, virtualization, and patches for core linux utilities such as ps and top. I worked primarily in userspace.}
 
-    //2f  1.2 @Scale 0w @VShift {[Spring 2010] Web Programming in Google Web Toolkit /0.8f "@" GridCentric Inc.}
-    //1f |1.5f 0w @VShift{/0.1f GridCentric provides quality virtual clustering technology. The GridCentric system includes an interactive web interface that can control and monitor the virtual clusters on the network. I spent 4 months rewriting and improving the web interface, resulting in clearer code, greatly improved efficiency, better security, and 10,000 less lines of code. Additionally, I created graphics for GridCentric's wiki and helped design the logo for the product "Copper." See end for link to GridCentric's wiki for screenshots of my work.}
+    //2f  1.2 @Scale 0w @VShift {[Spring 2010] Web Programming in Google Web Toolkit /0.8f "@" GridCentric Inc. 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}}
+    //1f |1.5f 0w @VShift{/0.1f GridCentric provides quality virtual clustering technology. The GridCentric system includes an interactive web interface that can control and monitor the virtual clusters on the network. I rewrote and improved the web interface, resulting in greater readability, improved efficiency, better security, and 10,000 less lines of code. Additionally, I created graphics for GridCentric's wiki and helped design the logo for the product "Copper." See end for screenshot links to GridCentric's wiki.}
 }
 //2f
 |3f {
 
-    1.2 @Scale 0w @VShift {[Summer 2009] Creation of a Job Distribution System /0.8f "@" Xandros Corp.}
+    1.2 @Scale 0w @VShift {[Summer 2009] Creation of a Job Distribution System /0.8f "@" Xandros Corp. 0.6 @Scale{Waterloo Employer Satisfaction: 5"/"6}}
     //1f |1.5f 0w @VShift{/0.1f I designed and implemented a package automation system in Python. This system manages several package creation servers over the network via small daemons. It is capable of starting, stopping, and monitoring running jobs remotely. Additionally, it features a custom network protocol and stores job runtime averages.}
 
-    //2f 1.2 @Scale 0w @VShift {[Winter 2008] Package Management Automation, Internationalization /0.8f "@" Xandros Corp.}
+    //2f 1.2 @Scale 0w @VShift {[Winter 2008] Packaging Automation, Internationalization /0.8f "@" Xandros Corp. 0.6 @Scale{Waterloo Employer Rank: 4"/"6}}
     //1f |1.5f 0w @VShift{/0.1f Xandros built Linux distributions. Thus, many Debian packages needed to be rebuilt regularly and managed. I rewrote, fixed, and improved the automation framework which was written in shell script and Perl. Additionally, I wrote several medium sized scripts to help find and merge internationalization files.}
 
-    //2f 1.2 @Scale 0w @VShift {[Spring 2008] Database Abstraction, DBus (IPC), Graphical UI /0.8f "@" Pacific "&" Western Bank "/" VersaBanq Innovations Inc.}
+    //2f 1.2 @Scale 0w @VShift {[Spring 2008] Database Abstraction, DBus (IPC), Graphical UI /0.8f "@" VersaBanq Innovations Inc. 0.6 @Scale{Waterloo Employer Rank: 6"/"6}}
     //1f |1.5f 0w @VShift{/0.1f I contributed to the Versaplex project, which aims to create a database abstraction layer. I also rewrote part of a Dbus (inter-process communications system) implementation  for C"#". Finally, I created a graphical program to easily interface with SQL databases via Versaplex (See end for link to images "/" explanation).}
+
+    //2f 1.2 @Scale 0w @VShift {[Summer 2006 (highschool)] Database Cleaning "&" Scripting /0.8f "@" Advanced Chemistry Development Labs}
+    //1f |1.5f 0w @VShift{/0.1f I re-organized large portions of the company's MSSQL database manually so that it was possible to look further back into customer history. I also made a convenience program that would take data from hundreds of commonly-structured e-mails and put the relevant information into an SQL table.}
 
 }
 //2f
 |3f {
 
-    1.2 @Scale 0w @VShift {[Summer 2006 (highschool)] Database Cleaning "&" Scripting /0.8f "@" Advanced Chemistry Development Labs}
-    //1f |1.5f 0w @VShift{/0.1f I re-organized large portions of the company's MSSQL database manually so that it was possible to look further back into customer history. I also made a convenience program that would take data from hundreds of commonly-structured e-mails and put the relevant information into an SQL table.}
-
-    //2f 1.2 @Scale 0w @VShift {[Summer 2005 (highschool)] Database Entry /0.8f "@" Advanced Chemistry Development Labs}
+    1.2 @Scale 0w @VShift {[Summer 2005 (highschool)] Database Entry /0.8f "@" Advanced Chemistry Development Labs}
     //1f |1.5f 0w @VShift{/0.1f I sorted through the old paper records for purchases and maintenance subscriptions, and put them into CRM (Customer Relationship Management) software. I also organized old digital entries.}
 }
 
@@ -89,7 +89,7 @@
           {1.4 @Scale 0w @VShift @I {Open Source Contributions}
     //1f |1.5f 0w @VShift{/0.1f Submitted improvements to ``Avant Window Navigator,'' ``Awesome WM,'' and ``Tremulous.'' Active in the open source community since 2004.}}
 
-    //2f {1.4 @Scale 0w @VShift @I {Package Maintenence}
+    //2f {1.4 @Scale 0w @VShift @I {Package Maintenance}
     //1f |1.5f 0w @VShift{/0.1f Maintain several ``universe'' packages for the ``Arch Linux'' distribution and routinely deal with other maintainers to suggest and help with improvements.}}
 
     //2f {1.4 @Scale 0w @VShift @I {Open Source Projects}
@@ -98,6 +98,8 @@
     //2f {1.4 @Scale 0w @VShift @I {ForestOfThought.com "&" Garoth.com}
     //1f |1.5f 0w @VShift{/0.1f These are my personal blogs. Forest Of Thought is a now unmaintained site for philosophical writings. Garoth.com is my main homepage and blog, largely for project announcements.}}
 }
+
+//6f @Centre 0.8 @Scale {Resume programmed using Lout, a competitor to LaTeX}
 
 //3f
 
@@ -118,6 +120,9 @@
 
     //2f {1.4 @Scale 0w @VShift @I {Plutocracy, An Original Game Project}
     //1f |1.5f 0w @VShift{/0.1f "http://plutocracy.googlecode.com/" /0.8f "http://garoth.com/?cat=12"}}
+
+    //2f {1.4 @Scale 0w @VShift @I {This Resume's Source!}
+    //1f |1.5f 0w @VShift{/0.1f "https://github.com/Garoth/Resume"}}
 }
 
 @End @Text
