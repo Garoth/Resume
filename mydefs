@@ -1,0 +1,53 @@
+# DEBUGGING -- Draws the size of an object and it's marks
+def @ShowMarks
+  named linewidth  { 0.015 cm }
+  named linestyle  { dashed }
+  named dashlength { 0.15 cm }
+  named paint      { lightgrey}
+  right x
+{
+
+  @HContract @VContract @Fig
+  {   @Box margin { 0c } linewidth { linewidth } paint { paint }
+    {
+       @Figure
+       shape {
+         -0.3 cm ymark
+         {xsize ymark} ++ {0.3 cm 0}  []
+         xmark -0.3 cm
+         {xmark ysize} ++ {0 0.3 cm}
+       }
+       linewidth { linewidth }
+       linestyle { linestyle }
+       dashlength { dashlength }
+       x
+    }
+  }
+}
+
+# Makes a quote display with a watermarked double quote
+def @FunnyQuote named @Source {} right x
+        {@QD {{2.5f @High @VClip {cmyk 0.08 0.08 0.08 0.08} @Colour {10 @Scale {``}}}
+        }}
+
+# Draws a horizontal line as wide as it can
+def @HLine {
+    "0 0 moveto xsize 0 lineto 0.05 ft setlinewidth stroke" @Graphic {}
+}
+
+# Draws a vertical line as wide as it can
+def @VLine {
+    "0 0 moveto 0 ysize lineto 0.05 ft setlinewidth stroke" @Graphic {}
+}
+
+# Berlin citation for aristotle references formatting
+def @CiteAris
+    named n name {} # Book name, english
+    named b book {} # Book number, lower case roman
+    named ch chapter {} # chapter number, decimal
+    named p page {} # page, decimal
+    named c column {} # column, a or b
+    named l line {} # line number, decimal
+{
+    @I n b. ch. {| c ^/0.2fo p} | l
+}
