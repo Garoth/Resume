@@ -26,46 +26,33 @@
     //1f |1.5f 0w @VShift{/0.1f Python, Java, C, Bash, XHTML, CSS, C"#" 0.8 @Scale (rusty)}}
 
     //2f {1.4 @Scale 0w @VShift @I {Notable APIs}
-    //1f |1.5f 0w @VShift{/0.1f Google Web Toolkit (GWT), GIMP Toolkit (GTK), Cairo, DBus, Hardware Abstraction Layer (HAL), Sqlite, Python Twisted, C pthreads"/"sockets, Various standard libraries}}
+    //1f |1.5f 0w @VShift{/0.1f Google Web Toolkit (GWT), GIMP Toolkit (GTK), Cairo, basic X11, DBus, Hardware Abstraction Layer (HAL), Sqlite, Python Twisted, C pthreads"/"sockets, Various standard libraries}}
 
     //2f {1.4 @Scale 0w @VShift @I {Art}
-    //1f |1.5f 0w @VShift{/0.1f Blender 3D, traditional mediums (ex. pencils, conte, watercolour), digital graphics tablet, vector graphics (Inkscape), logos, layout design. See end for links to galleries.}}
+    //1f |1.5f 0w @VShift{/0.1f Blender 3D, traditional mediums (ex. pencils, conte, watercolour), digital graphics tablet, vector graphics, logos, layout design. Several years of private tutoring. See the end for links to galleries.}}
 
     //2f {1.4 @Scale 0w @VShift @I {English}
-    //1f |1.5f 0w @VShift{/0.1f Private tutoring, very top grades in high school English, English award upon completion of grade 8}}
-}
-
-//3f
-
-90d @Rotate 1.6 @Scale 1w @HShift @S {Education}
-|2f @OneRow {
-          {1.4 @Scale 0w @VShift @I {2007 @M{-->} Present}
-    //1f |1.5f 0w @VShift{/0.1f Candidate for Bachelor of Computer Science Degree, /0.5f University of Waterloo}}
-
-    //2f {1.4 @Scale 0w @VShift @I {2001 @M{-->} 2004}
-    //1f |1.5f 0w @VShift{/0.1f Private English Tutoring (Helen Coles, Masters' degree holder)}}
-
-    //2f {1.4 @Scale 0w @VShift @I {2001 @M{-->} 2005}
-    //1f |1.5f 0w @VShift{/0.1f Private Art Tutoring (Alla Berdichevskaya, highschool art teacher)}}
+    //1f |1.5f 0w @VShift{/0.1f Private tutoring and top grades in high school English. See the end for a link to my blog.}}
 }
 
 //3f
 
 90d @Rotate 1.6 @Scale 1w @HShift @S {Work Experience}
 |2f @OneRow {
-          1.2 @Scale 0w @VShift {[Winter 2011] Kernel "/" Linux Products Team /0.8f "@" Wind River (subs. Intel) 0.6 @Scale{Waterloo Employer Satisfaction: Term Incomplete}}
+          1.2 @Scale 0w @VShift {[Winter 2011] Kernel "/" Linux Products Team /0.8f "@" Wind River (subs. Intel) 0.6 @Scale{Waterloo Employer Satisfaction: Pending}}
     //1f |1.5f 0w @VShift{/0.1f Wind River is best known for the realtime vxWorks operating system. At Wind River, I wrote C code for a system that allows for two-way communication between different virtual machines on the same physical hardware. This is done via shared memory and aims to provide a Linux frontend to realtime vxWorks applications. The system includes threading, sockets, careful memory management, kernel modules, virtualization, and patches for core linux utilities such as ps and top. I worked primarily in userspace.}
 
     //2f  1.2 @Scale 0w @VShift {[Spring 2010] Web Programming in Google Web Toolkit /0.8f "@" GridCentric Inc. 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}}
     //1f |1.5f 0w @VShift{/0.1f GridCentric provides quality virtual clustering technology. The GridCentric system includes an interactive web interface that can control and monitor the virtual clusters on the network. I rewrote and improved the web interface, resulting in greater readability, improved efficiency, better security, and 10,000 less lines of code. Additionally, I created graphics for GridCentric's wiki and helped design the logo for the product "Copper." See end for screenshot links to GridCentric's wiki.}
+
+    //2f 1.2 @Scale 0w @VShift {[Summer 2009] Creation of a Job Distribution System /0.8f "@" Xandros Corp. 0.6 @Scale{Waterloo Employer Satisfaction: 5"/"6}}
+    //1f |1.5f 0w @VShift{/0.1f I designed and implemented a package automation system in Python. This system manages several package creation servers over the network via small daemons. It is capable of starting, stopping, and monitoring running jobs remotely. Additionally, it features a custom network protocol and stores job runtime averages.}
+
 }
 //2f
 |3f {
 
-    1.2 @Scale 0w @VShift {[Summer 2009] Creation of a Job Distribution System /0.8f "@" Xandros Corp. 0.6 @Scale{Waterloo Employer Satisfaction: 5"/"6}}
-    //1f |1.5f 0w @VShift{/0.1f I designed and implemented a package automation system in Python. This system manages several package creation servers over the network via small daemons. It is capable of starting, stopping, and monitoring running jobs remotely. Additionally, it features a custom network protocol and stores job runtime averages.}
-
-    //2f 1.2 @Scale 0w @VShift {[Winter 2008] Packaging Automation, Internationalization /0.8f "@" Xandros Corp. 0.6 @Scale{Waterloo Employer Rank: 4"/"6}}
+    1.2 @Scale 0w @VShift {[Winter 2008] Packaging Automation, Internationalization /0.8f "@" Xandros Corp. 0.6 @Scale{Waterloo Employer Rank: 4"/"6}}
     //1f |1.5f 0w @VShift{/0.1f Xandros built Linux distributions. Thus, many Debian packages needed to be rebuilt regularly and managed. I rewrote, fixed, and improved the automation framework which was written in shell script and Perl. Additionally, I wrote several medium sized scripts to help find and merge internationalization files.}
 
     //2f 1.2 @Scale 0w @VShift {[Spring 2008] Database Abstraction, DBus (IPC), Graphical UI /0.8f "@" VersaBanq Innovations Inc. 0.6 @Scale{Waterloo Employer Rank: 6"/"6}}
@@ -84,10 +71,19 @@
 
 //3f
 
+90d @Rotate 1.6 @Scale 1w @HShift @S {Education}
+|2f @OneRow {
+          {1.4 @Scale 0w @VShift @I {2007 @M{-->} Present}
+    //1f |1.5f 0w @VShift{/0.1f Candidate for Bachelor of Computer Science Degree, /0.5f University of Waterloo}}
+}
+
+
+//3f
+
 90d @Rotate 1.6 @Scale 1w @HShift @S {Open Source "&" Other Projects}
 |2f @OneRow {
           {1.4 @Scale 0w @VShift @I {Open Source Contributions}
-    //1f |1.5f 0w @VShift{/0.1f Submitted improvements to ``Avant Window Navigator,'' ``Awesome WM,'' and ``Tremulous.'' Active in the open source community since 2004.}}
+    //1f |1.5f 0w @VShift{/0.1f Submitted improvements to ``The Arch Linux Project,'' ``Awesome WM,'' and ``Tremulous.'' Active in the open source community since 2004.}}
 
     //2f {1.4 @Scale 0w @VShift @I {Package Maintenance}
     //1f |1.5f 0w @VShift{/0.1f Maintain several ``universe'' packages for the ``Arch Linux'' distribution and routinely deal with other maintainers to suggest and help with improvements.}}
@@ -95,8 +91,8 @@
     //2f {1.4 @Scale 0w @VShift @I {Open Source Projects}
     //1f |1.5f 0w @VShift{/0.1f Founder of the ``Obvious'' widget library for ``Awesome WM.'' Created ``gem2arch'' program to generate Arch Linux packages from Ruby Gems (officially included in next version of Arch Linux pkgtools). Written IRC Bots, little known games, and many small scripts.}}
 
-    //2f {1.4 @Scale 0w @VShift @I {ForestOfThought.com "&" Garoth.com}
-    //1f |1.5f 0w @VShift{/0.1f These are my personal blogs. Forest Of Thought is a now unmaintained site for philosophical writings. Garoth.com is my main homepage and blog, largely for project announcements.}}
+    //2f {1.4 @Scale 0w @VShift @I {Garoth.com}
+    //1f |1.5f 0w @VShift{/0.1f Garoth.com is my personal blog, where I do project announcements, write about my interests, and post my drawings and creations.}}
 }
 
 //6f @Centre 0.8 @Scale {Resume programmed using Lout, a competitor to LaTeX}
