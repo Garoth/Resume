@@ -30,7 +30,7 @@
 ###############################################################################
 
 @Use { @BasicSetup
-  # @InitialFont	{ Times Base 12p	} # initial font
+  @InitialFont	{ Times Base 12p	} # initial font
   # @InitialBreak	{adjust 1.8fx hyphen}
   # @InitialOutdent	{ 2f @OrIfPlain 4s	} # initial outdent
   # @InitialSpace	{ lout			} # initial space style
@@ -285,10 +285,10 @@
   # @StructPageNums	{ No			} # make structured page numbers
   # @PageNumberFormat   { number                } # format of all page numbers
 
-  # @OddTop		{ @Centre{- @PageNum -}	} # Simple page headers
-  # @OddFoot		{ @Null			}
-  # @EvenTop		{ @Centre{- @PageNum -}	}
-  # @EvenFoot		{ @Null			}
+  @OddTop		{ @Null		 } # Simple page headers
+  @OddFoot		{ @Centre{- @PageNum -}	   }
+  @EvenTop		{ @Null		 }
+  @EvenFoot		{ @Centre{- @PageNum -}	   }
   # @StartOddTop	{ @Null			}
   # @StartOddFoot	{ @Null			}
   # @StartEvenTop	{ @Null			}
