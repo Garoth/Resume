@@ -7,7 +7,7 @@
 @OneRow{
         1w @HShift 0w @VShift 3.2 @Scale {Andrei Alex Edell}
 /0.5f   1w @HShift {1.6 @Scale @S {University of Waterloo, B. Math}}
-/0.5f   1w @HShift {full resume: "linkedin.com/in/hugelung" @FootNote @Label {@Dagger} {This resume was programmed using Lout since 2011 "~ https://github.com/Garoth/Resume"/0.5f ~~ (A 1991 alternative to LaTeX by Dr. Jeffrey H. Kingston "@" The University of Sydney)}}
+/0.5f   1w @HShift {resume with pictures: "linkedin.com/in/hugelung" @FootNote @Label {@Dagger} {This resume was programmed using Lout since 2011 "~ https://github.com/Garoth/Resume"/0.5f ~~ (A 1991 alternative to LaTeX by Dr. Jeffrey H. Kingston "@" The University of Sydney)}}
 /0.5f   1w @HShift {latest project: seenandheard.app}
 /0.5f   1w @HShift {a@nugbase.com}
 /0.5f   1w @HShift {hilo, hawaii, usa}
@@ -17,21 +17,24 @@
 -90d @Rotate { 1.6 @Scale @S {Software Wizard} }
 }
 
-//6f
+//2f
 
-90d @Rotate 1.6 @Scale 1w @HShift @S {Skills "&" Abilities}
+90d @Rotate 1.6 @Scale 1w @HShift @S {About}
 |2f @OneRow {
-        {1.2 @Scale {Top Programming Languages}
-    //1f |1.5f 0w @VShift{/0.1f Go, JavaScript, TypeScript, Python, Java, Dart, C, C"#", Shell, Solidity}}
+    { darkblue @Colour @B {7 years at Evernote}, writing: ~ the shared @B {note editor}, @B {realtime collaboration} engine, cross-platform @B electron app, @B Java backend, @B JavaScript"/"TypeScript web client, settings pages, and partnership pages. @B{I won both company-wide hackathons}, gave board presentations, and worked closely with multiple CTOs on R"&"D projects for @B {Skitch "/" Penultimate "/" Editing Features}}
 
-    //2f {1.2 @Scale {Technologies "&" Frameworks}
-    //1f |1.5f 0w @VShift{/0.1f React, Web, Flutter, WebRTC, Blockchain "&" Ethereum, Protobuf "&" GRPC, Kubernetes, Google Cloud Platform, Amazon Web Services}}
+    //2f { darkblue @Colour @B {5 years as CEO at Nugbase}, my successful software startup, with @B {8 employees "+" 4 contractors}, pioneering in blockchain @B {indexing and on-chain interactions}. I implemented one of the first @B NFTs with Flowerpatch: a @B Web + @B {Go microservice backend} massively multiplayer game world @B WebGL engine backed into @B {Google Cloud Kubernetes}, smart contracts in @B Solidity for Gary Vee's Dapper Dinos, and @B {a novel metatransaction system} for embedding blockchain transactions into QR codes, called Redeemable. See: @F {nugbase.com}}
 
-    //2f {1.2 @Scale {Graphic Design}
-    //1f |1.5f 0w @VShift{/0.1f UI"/"UX Design, Web, Mobile, Raster, Vector, 3D Modeling "&" Animation}}
+    //2f { darkblue @Colour @B {Currently serving as the CTO at Seen "&" Heard}, leading a breakthrough therapy app that enables structured @B {peer-to-peer} video calls to foster active listening. My leadership includes managing @B {GCP Kubernetes clusters}, APIs designed using @B {Protobuf "&" GRPC}, spearheading cross-platform app development with @B Flutter, and designing @B WebRTC video streaming solutions that ensure seamless communication. See: @F seenandheard.app}
+}
 
-    //2f {1.2 @Scale {Soft Skills}
-    //1f |1.5f 0w @VShift{/0.1f CEO "&" CTO Experience, Compassionate Conflict Resolution, Strategic Project Management, Landmark Training, Startup Scaling, Pitching}}
+//2f
+
+90d @Rotate 1.6 @Scale 1w @HShift @S {Skills}
+|2f @OneRow {
+    {JavaScript, TypeScript, Python, Go, Java, Dart, Lua, C, C"#", Shell, Solidity, UI"/"UX Graphic Design, Landmark Training, CEO "&" CTO Experience}
+
+    |2f {React, Web, WebGL, Firebase, Flutter, WebRTC, Ethereum, Protobuf "&" GRPC, Go Microservices, Kubernetes, Google Cloud Platform}
 }
 
 //3f
@@ -45,8 +48,8 @@
     //2f 1.2 @Scale {CEO "@" Nugbase} ~~~~ @DateBox {Mar 2018-Aug 2023}
     //1f |1.5f 0w @VShift{/0.1f Founded Nugbase, a self-funded blockchain company with 8 employees and 4 contractors. Projects included:
         /1f {@B {Flowerpatch:} An early Ethereum NFT project with a multiplayer game, custom engine, still-active community, achieving NFT sales of up to 42 ETH per card}
-        /0.75f {@B {Dapper Dinos:} NFT project funded by Gary Vee, about breeding dinos. Implemented smart contracts, NFTs, websites}
-        /0.75f {@B {Redeemable:} A system for embedding private keys into QR codes, enabling physical NFTs}
+        /0.75f {@B {Dapper Dinos:} NFT project funded by Gary Vee, about breeding dinos. Implemented smart contracts, NFTs, websites "&" token mechanics}
+        /0.75f {@B {Redeemable:} A metatransactions system for embedding private keys into QR codes, enabling physical NFTs, which were given out at conferences and shops}
         }
     //1f |1.5f @F {/0.1f "nugbase.com, flowerpatch.app, dapperdinos.com"}
 
@@ -68,11 +71,11 @@
     }
 
     //2f 1.2 @Scale {Kernel "/" Linux Products Team} ~~~~ @DateBox {Winter 2011, University}
-        /0.8f 1.2 @Scale {"@" Wind River (subsidiary of Intel)} 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}
+        /0.8f 1.2 @Scale {"@" Wind River (subsidiary of Intel)} ~~ -0.1f @VShift 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}
     //1f |1.5f 0w @VShift{/0.1f Wind River makes the realtime VxWorks operating system, used by NASA missions for decades. I wrote C code for a system that allows for two-way communication between different virtual machines on the same physical hardware. This is done via shared memory and aims to provide a Linux frontend to realtime VxWorks applications. The system includes threading, sockets, careful memory management, kernel modules, virtualization, and patches for core linux utilities such as @F ps and @F top}
 
     //2f 1.2 @Scale {Web Programming in Google Web Toolkit} ~~~~ @DateBox {Spring 2010, University}
-        /0.8f 1.2 @Scale {"@" GridCentric Inc.} 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}
+        /0.8f 1.2 @Scale {"@" GridCentric Inc.} ~~ -0.1f @VShift 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}
     //1f |1.5f 0w @VShift{/0.1f Virtual machine cluster management. Implemented a web interface for managing the cluster of virtual machines and their private network, like an early version of Kubernetes or AWS. Created graphics for their wiki, and a product logo}
 
 }
@@ -80,15 +83,15 @@
 |3f {
 
     1.2 @Scale {Distributed Job Queue Cluster} ~~~~ @DateBox {Summer 2009, University}
-        /0.8f 1.2 @Scale {"@" Xandros Corp.} 0.6 @Scale{Waterloo Employer Satisfaction: 5"/"6}
+        /0.8f 1.2 @Scale {"@" Xandros Corp.} ~~ -0.1f @VShift 0.6 @Scale{Waterloo Employer Satisfaction: 5"/"6}
     //1f |1.5f 0w @VShift{/0.1f Designed and implemented a job automation cluster in Python. This system manages compiling packages on multiple servers, over the network. It is capable of starting, stopping, and monitoring remotely running jobs. Additionally, it features a custom network api, and stores statistics (like job runtime averages).}
 
     //2f 1.2 @Scale {Package Automation, I18n} ~~~~ @DateBox {Winter 2008, University}
-        /0.8f 1.2 @Scale {"@" Xandros Corp.} 0.6 @Scale{Waterloo Employer Rank: 4"/"6}
+        /0.8f 1.2 @Scale {"@" Xandros Corp.} ~~ -0.1f @VShift 0.6 @Scale{Waterloo Employer Rank: 4"/"6}
     //1f |1.5f 0w @VShift{/0.1f Xandros built Linux distributions. I fixed "&" improved the build automation framework, which was written in shell scripts and Perl. Also wrote a system to find and merge internationalization strings across projects, saving translators' time}
 
     //2f 1.2 @Scale {Database Abstraction, DBus, UI} ~~~~ @DateBox {Spring 2008, University}
-        /0.8f 1.2 @Scale {"@" VersaBank} 0.6 @Scale{(Pacific "&" Western Bank of Canada) Waterloo Employer Rank: 6"/"6}
+        /0.8f 1.2 @Scale {"@" VersaBank} ~~ -0.1f @VShift 0.6 @Scale{(Pacific "&" Western Bank of Canada) Waterloo Employer Rank: 6"/"6}
     //1f |1.5f 0w @VShift{/0.1f Worked on Versaplex, a database abstraction layer. Rewrote part of a Dbus (inter-process communications system) implementation for C"#". Created a database management UI for Versaplex }
 
     //2f 1.2 @Scale {Database Cleaning "&" Scripting} ~~~~ @DateBox {Summer 2006, Highschool}
