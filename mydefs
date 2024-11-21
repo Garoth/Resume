@@ -51,3 +51,7 @@ def @CiteAris
 {
     @I n b. ch. {| c ^/0.2fo p} | l
 }
+
+def @DateBox right x {
+    lightblue @Colour @CurveBox margin {0.15c} 0.8 @Scale {~ x ~}
+}
