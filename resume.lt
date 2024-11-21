@@ -24,14 +24,14 @@
         {1.2 @Scale {Top Programming Languages}
     //1f |1.5f 0w @VShift{/0.1f Go, JavaScript, TypeScript, Python, Java, Dart, C, C"#", Shell, Solidity}}
 
-    //2f {1.2 @Scale {"Technologies & Frameworks"}
-    //1f |1.5f 0w @VShift{/0.1f React, Web, Flutter, WebRTC, "Blockchain & Ethereum", "Protobuf & GRPC", Kubernetes, Google Cloud Platform, Amazon Web Services}}
+    //2f {1.2 @Scale {Technologies "&" Frameworks}
+    //1f |1.5f 0w @VShift{/0.1f React, Web, Flutter, WebRTC, Blockchain "&" Ethereum, Protobuf "&" GRPC, Kubernetes, Google Cloud Platform, Amazon Web Services}}
 
     //2f {1.2 @Scale {Graphic Design}
-    //1f |1.5f 0w @VShift{/0.1f  UI"/"UX Design, Web, Mobile, Raster, Vector, 3D Modeling "&" Animation}}
+    //1f |1.5f 0w @VShift{/0.1f UI"/"UX Design, Web, Mobile, Raster, Vector, 3D Modeling "&" Animation}}
 
     //2f {1.2 @Scale {Soft Skills}
-    //1f |1.5f 0w @VShift{/0.1f CEO "&" CTO Experience, Compassionate Conflict Resolution, Strategic Project Management, Startup Scaling, Pitching}}
+    //1f |1.5f 0w @VShift{/0.1f CEO "&" CTO Experience, Compassionate Conflict Resolution, Strategic Project Management, Landmark Training, Startup Scaling, Pitching}}
 }
 
 //3f
@@ -39,7 +39,8 @@
 90d @Rotate 1.6 @Scale 1w @HShift @S {Work Experience}
 |2f @OneRow {
         1.2 @Scale { CTO "@" Seen "&" Heard} ~~~~ @DateBox {Sep 2023-Present}
-    //1f |1.5f 0w @VShift{/0.1f Leading a new therapy app (seenandheard.app) that connects users in structured video calls to foster active listening and feedback. Responsible for GCP Kubernetes cluster, Flutter app for all platforms, and peer-to-peer WebRTC video streaming}
+    //1f |1.5f 0w @VShift{/0.1f Leading a new therapy app that connects users in structured video calls to foster active listening and feedback. Responsible for GCP Kubernetes cluster, Flutter app for all platforms, and peer-to-peer WebRTC video streaming}
+    //1f |1.5f @F {/0.1f "seenandheard.app"}
 
     //2f 1.2 @Scale {CEO "@" Nugbase} ~~~~ @DateBox {Mar 2018-Aug 2023}
     //1f |1.5f 0w @VShift{/0.1f Founded Nugbase, a self-funded blockchain company with 8 employees and 4 contractors. Projects included:
@@ -47,17 +48,18 @@
         /0.75f {@B {Dapper Dinos:} NFT project funded by Gary Vee, about breeding dinos. Implemented smart contracts, NFTs, websites}
         /0.75f {@B {Redeemable:} A system for embedding private keys into QR codes, enabling physical NFTs}
         }
+    //1f |1.5f @F {/0.1f "nugbase.com, flowerpatch.app, dapperdinos.com"}
 
     //2f 1.2 @Scale { SP20 Cohort } ~~~~ @DateBox {Jan 2020-Sep 2020}
         /0.8f 1.2 @Scale {"@" University of Berkeley Blockchain Xcelerator}
-    //1f |1.5f 0w @VShift{/0.1f Represented Nugbase in this accelerator program, gaining skills in bizdev, pitching, and venture capitalist relations. Collaborated with blockchain teams and industry leaders}
-    //1f |1.5f 0w @VShift{/0.1f "https://xcelerator.berkeley.edu/new-age-marketing-at-nugbase/"}
+    //1f |1.5f 0w @VShift{/0.1f Represented Nugbase in this accelerator program, gaining skills in bizdev, pitching, and venture capitalist relations. Collaborated with blockchain teams and industry leaders for 10 months}
+    //1f |1.5f @F {/0.1f "xcelerator.berkeley.edu/new-age-marketing-at-nugbase"}
 
 }
 //2f
 |2f {
-    1.2 @Scale 0w @VShift {[Sep 2011 - Mar 2018] Software Engineer "@" Evernote}
-    //1f |1.5f 0w @VShift{/0.1f Joined as the 100th employee, won both company-wide hackathons reshaping the company agenda, gave board presentations, and worked closely with multiple CTOs on special projects. Highlights:
+    1.2 @Scale {Software Engineer "@" Evernote} ~~~~ @DateBox {Sep 2011-Mar 2018}
+    //1f |1.5f 0w @VShift{/0.1f Joined at the startup phase, won both company-wide hackathons, reshaped the company agenda, gave board presentations, and worked closely with multiple CTOs on special projects. Highlights:
     /0.75f {@B {Uno Editor:} wrote huge parts of the cross-platform HTML note editor}
     /0.75f {@B {Realtime:} founded the real-time collaborative editor team}
     /0.75f {@B {Electron App:} founded the cross-platform client project to unify codebase}
@@ -65,34 +67,34 @@
     /0.75f {@B {Websites:} public facing websites, settings pages, web client, and partnerships like Orange France Telecom}
     }
 
-    //2f 1.2 @Scale 0w @VShift {[Winter 2011] Kernel "/" Linux Products Team /0.8f "@" Wind River (subs. Intel) 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}}
-    //1f |1.5f 0w @VShift{/0.1f Wind River makes the realtime VxWorks operating system, used by NASA missions for decades. I wrote C code for a system that allows for two-way communication between different virtual machines on the same physical hardware. This is done via shared memory and aims to provide a Linux frontend to realtime VxWorks applications. The system includes threading, sockets, careful memory management, kernel modules, virtualization, and patches for core linux utilities such as ps and top}
+    //2f 1.2 @Scale {Kernel "/" Linux Products Team} ~~~~ @DateBox {Winter 2011, University}
+        /0.8f 1.2 @Scale {"@" Wind River (subsidiary of Intel)} 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}
+    //1f |1.5f 0w @VShift{/0.1f Wind River makes the realtime VxWorks operating system, used by NASA missions for decades. I wrote C code for a system that allows for two-way communication between different virtual machines on the same physical hardware. This is done via shared memory and aims to provide a Linux frontend to realtime VxWorks applications. The system includes threading, sockets, careful memory management, kernel modules, virtualization, and patches for core linux utilities such as @F ps and @F top}
 
-    //2f  1.2 @Scale 0w @VShift {[Spring 2010] Web Programming in Google Web Toolkit /0.8f "@" GridCentric Inc. 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}}
-    //1f |1.5f 0w @VShift{/0.1f Implemented a web interface for managing and monitoring a cluster of virtual machines and their private network, like an early version of Amazon Web Services. Created graphics for their wiki, and product logos}
+    //2f 1.2 @Scale {Web Programming in Google Web Toolkit} ~~~~ @DateBox {Spring 2010, University}
+        /0.8f 1.2 @Scale {"@" GridCentric Inc.} 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}
+    //1f |1.5f 0w @VShift{/0.1f Virtual machine cluster management. Implemented a web interface for managing the cluster of virtual machines and their private network, like an early version of Kubernetes or AWS. Created graphics for their wiki, and a product logo}
 
 }
 //2f
 |3f {
 
-    1.2 @Scale 0w @VShift {[Summer 2009] Distributed Job Queue Cluster /0.8f "@" Xandros Corp. 0.6 @Scale{Waterloo Employer Satisfaction: 5"/"6}}
+    1.2 @Scale {Distributed Job Queue Cluster} ~~~~ @DateBox {Summer 2009, University}
+        /0.8f 1.2 @Scale {"@" Xandros Corp.} 0.6 @Scale{Waterloo Employer Satisfaction: 5"/"6}
     //1f |1.5f 0w @VShift{/0.1f Designed and implemented a job automation cluster in Python. This system manages compiling packages on multiple servers, over the network. It is capable of starting, stopping, and monitoring remotely running jobs. Additionally, it features a custom network api, and stores statistics (like job runtime averages).}
 
-    //2f 1.2 @Scale 0w @VShift {[Winter 2008] Packaging Automation, Internationalization /0.8f "@" Xandros Corp. 0.6 @Scale{Waterloo Employer Rank: 4"/"6}}
+    //2f 1.2 @Scale {Package Automation, I18n} ~~~~ @DateBox {Winter 2008, University}
+        /0.8f 1.2 @Scale {"@" Xandros Corp.} 0.6 @Scale{Waterloo Employer Rank: 4"/"6}
     //1f |1.5f 0w @VShift{/0.1f Xandros built Linux distributions. I fixed "&" improved the build automation framework, which was written in shell scripts and Perl. Also wrote a system to find and merge internationalization strings across projects, saving translators' time}
 
-    //2f 1.2 @Scale 0w @VShift {[Spring 2008] Database Abstraction, DBus (IPC), Graphical UI /0.8f "@" VersaBank 0.6 @Scale{(Pacific "&" Western Bank of Canada) Waterloo Employer Rank: 6"/"6}}
+    //2f 1.2 @Scale {Database Abstraction, DBus, UI} ~~~~ @DateBox {Spring 2008, University}
+        /0.8f 1.2 @Scale {"@" VersaBank} 0.6 @Scale{(Pacific "&" Western Bank of Canada) Waterloo Employer Rank: 6"/"6}
     //1f |1.5f 0w @VShift{/0.1f Worked on Versaplex, a database abstraction layer. Rewrote part of a Dbus (inter-process communications system) implementation for C"#". Created a database management UI for Versaplex }
 
-    //2f 1.2 @Scale 0w @VShift {[Summer 2006 (highschool)] Database Cleaning "&" Scripting /0.8f "@" Advanced Chemistry Development Labs}
+    //2f 1.2 @Scale {Database Cleaning "&" Scripting} ~~~~ @DateBox {Summer 2006, Highschool}
+        /0.8f 1.2 @Scale {"@" Advanced Chemistry Development Labs}
     //1f |1.5f 0w @VShift{/0.1f Reorganized large portions of the company's MSSQL database so that it was possible to look further back into customer history. Wrote a program that would take data from hundreds of commonly-structured e-mails and put the relevant information into an SQL table}
 
-}
-//2f
-|3f {
-
-    1.2 @Scale 0w @VShift {[Summer 2005 (highschool)] Database Entry /0.8f "@" Advanced Chemistry Development Labs}
-    //1f |1.5f 0w @VShift{/0.1f Sorted through the old paper records for purchases and maintenance subscriptions, and put them into CRM software. I also organized old digital records}
 }
 
 @End @Text

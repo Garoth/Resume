@@ -286,9 +286,9 @@
   # @PageNumberFormat   { number                } # format of all page numbers
 
   @OddTop		{ @Null		 } # Simple page headers
-  @OddFoot		{ @Centre{- @PageNum -}	   }
+  @OddFoot		{ @PageNum.	   }
   @EvenTop		{ @Null		 }
-  @EvenFoot		{ @Centre{- @PageNum -}	   }
+  @EvenFoot		{ @PageNum.	   }
   # @StartOddTop	{ @Null			}
   # @StartOddFoot	{ @Null			}
   # @StartEvenTop	{ @Null			}
