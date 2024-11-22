@@ -1,0 +1,2237 @@
+%!PS-Adobe-3.0
+%%Creator: Basser Lout Version 3.42 (Dec 2020)
+%%CreationDate: Thu Nov 21 14:20:15 2024
+%%DocumentData: Binary
+%%DocumentNeededResources: (atend)
+%%DocumentSuppliedResources: (atend)
+%%DocumentMedia: Letter 612 792 0 white ()
+%%PageOrder: Ascend
+%%LanguageLevel: 2
+%%Pages: (atend)
+%%BoundingBox: 0 0 612 792
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset LoutStartUp
+/cp_x 0 def
+/cp_y 0 def
+/louts 0 def
+/loutv 0 def
+/loutf 0 def
+/ymark 0 def
+/xmark 0 def
+/ysize 0 def
+/xsize 0 def
+/save_cp { currentpoint /cp_y exch def /cp_x exch def } bind def
+/restore_cp { cp_x cp_y moveto } bind def
+/outline { gsave 1 1 1 setrgbcolor dup show save_cp
+  grestore true charpath stroke restore_cp } bind def
+/m  { 3 1 roll moveto show } bind def
+/mo { 3 1 roll moveto outline } bind def
+/s  { exch currentpoint exch pop moveto show } bind def
+/so { exch currentpoint exch pop moveto outline } bind def
+/k  { exch neg 0 rmoveto show } bind def
+/ko { exch neg 0 rmoveto outline } bind def
+/r  { exch 0 rmoveto show } bind def
+/ro { exch 0 rmoveto outline } bind def
+/c  { gsave 3 1 roll rmoveto show grestore } bind def
+/co { gsave 3 1 roll rmoveto outline grestore } bind def
+/ul { gsave setlinewidth dup 3 1 roll
+      moveto lineto stroke grestore } bind def
+/in { 1440 mul } bind def
+/cm { 566.929 mul } bind def
+/pt { 20 mul } bind def
+/em { 120 mul } bind def
+/sp { louts mul } def
+/vs { loutv mul } def
+/ft { loutf mul } def
+/dg {           } def
+
+/LoutGraphic {
+  /louts exch def
+  /loutv exch def
+  /loutf exch def
+  /ymark exch def
+  /xmark exch def
+  /ysize exch def
+  /xsize exch def
+} def
+
+/LoutGr2 { gsave translate LoutGraphic gsave } def
+
+/LoutFont
+{ findfont exch scalefont setfont
+} bind def
+
+/LoutRecode {
+  { findfont dup length dict begin
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    /Encoding exch def
+    currentdict end definefont pop
+  }
+  stopped pop
+} bind def
+
+/PreEPSF_state 0 def
+/dict_stack 0 def
+/ops_count 0 def
+/LoutStartEPSF { % prepare for EPSF inclusion
+  /PreEPSF_state save def
+  /dict_stack countdictstack def
+  /ops_count count 1 sub def
+  20 dict begin
+  /showpage {} def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin
+  10 setmiterlimit [] 0 setdash newpath
+  /languagelevel where
+  { pop languagelevel
+    1 ne
+    { false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+/LoutEPSFCleanUp { % clean up after EPSF inclusion
+  count ops_count sub { pop } repeat
+  countdictstack dict_stack sub { end } repeat
+  PreEPSF_state restore
+} bind def
+
+% Find current texture (may be null)
+% - LoutCurrentP p
+/LoutCurrentP
+{
+  currentcolorspace
+  0 get /Pattern eq
+  {
+    [ currentcolor ]
+    dup length 1 sub get
+  }
+  {
+    null
+  } ifelse
+} def
+
+% Find current color and color space
+% - LoutCurrentCCS c cs
+/LoutCurrentCCS
+{
+  LoutCurrentP dup null eq
+  {
+    pop [ currentcolor ]
+    currentcolorspace
+  }
+  {
+    dup
+    /UnderlyingColor get
+    exch /UnderlyingColorSpace get
+  } ifelse
+} def
+
+% Install c, cs, and (a copy of) p into graphics state
+% c cs p LoutSetCCSP -
+/LoutSetCCSP
+{
+  dup null eq
+  {
+    pop setcolorspace
+    aload pop setcolor
+  }
+  {
+    % copy pattern dictionary
+    12 dict copy
+
+    % record cs and c in p
+    dup /UnderlyingColorSpace 3 index
+    put
+    dup /UnderlyingColor 4 index
+    put
+
+    % do setcolorspace and setcolor
+    dup /PaintType get 1 eq
+    {
+      [ /Pattern ] setcolorspace
+      setcolor
+      pop pop
+    }
+    {
+      [ /Pattern
+      4 -1 roll
+      ] setcolorspace
+      exch aload length 1 add
+      -1 roll
+      setcolor
+    } ifelse
+  } ifelse
+} bind def
+
+% num LoutSetGray -
+/LoutSetGray
+{
+  [ 2 1 roll ]
+  [ /DeviceGray ]
+  LoutCurrentP
+  LoutSetCCSP
+} bind def
+
+% r g b LoutSetRGBColor -
+/LoutSetRGBColor
+{
+  [ 4 1 roll ]
+  [ /DeviceRGB ]
+  LoutCurrentP
+  LoutSetCCSP
+} bind def
+
+% h s b LoutSetHSBColor -
+/LoutSetHSBColor
+{
+  gsave sethsbcolor
+  currentrgbcolor grestore
+  LoutSetRGBColor
+} bind def
+
+% c m y k LoutSetRGBColor -
+/LoutSetCMYKColor
+{
+  [ 5 1 roll ]
+  [ /DeviceCMYK ]
+  LoutCurrentP
+  LoutSetCCSP
+} bind def
+
+% p LoutSetTexture -
+/LoutSetTexture
+{
+  LoutCurrentCCS
+  3 -1 roll
+  LoutSetCCSP
+} bind def
+
+% <scale > <scalex> <scaley> <rotate> <hshift> <vshift>
+% <painttype> <bbox> <xstep> <ystep> <paintproc> LoutMakeTexture p
+/LoutMakeTexture
+{
+  12 dict begin
+  /PaintProc exch def
+  /YStep exch def
+  /XStep exch def
+  /BBox exch def
+  /PaintType exch def
+  /PatternType 1 def
+  /TilingType 1 def
+  currentdict end
+  7 1 roll
+  matrix translate
+  5 1 roll
+  matrix rotate
+  4 1 roll
+  matrix scale
+  exch dup matrix scale
+  matrix concatmatrix
+  matrix concatmatrix
+  matrix concatmatrix
+  /makepattern where
+  {
+    pop makepattern
+  }
+  {
+    pop pop null
+  } ifelse
+} bind def
+
+/LoutTextureSolid
+{
+  null
+  LoutSetTexture
+} bind def
+%%EndResource
+
+%%BeginResource: procset LoutBasicSetup
+% @PrependGraphic file /usr/lib/lout/include/bsf.lpg
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%  PostScript @SysPrependGraphic file for @BasicSetup                %
+%                                                                    %
+%  This file has been placed in the public domain by its author,     %
+%  Jeffrey H. Kingston                                               %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% width height linethickness louteuro -
+% draw a Euro symbol of this width and height with this line thickness
+/louteuro {
+  20 dict begin
+    /eurothick exch def
+    /euroheight exch def
+    /eurowidth exch def
+    /eurostrokewidth euroheight 0.8 mul def
+    /eurostep eurothick 60 cos mul 60 sin div def
+    /eurotheta 40 def
+
+    % llx lly width thickness louteurobox -
+    % draw angled box starting at (llx, lly) with given width and thickness
+    /louteurobox
+    {
+      /euroboxthick exch def
+      /euroboxwidth exch def
+      newpath moveto euroboxwidth 0 rlineto
+      eurostep euroboxthick rlineto
+      euroboxwidth neg 0 rlineto closepath fill
+    } def
+
+    % lower cross stroke
+    0 euroheight 2 div eurothick 1.5 mul sub
+    eurostrokewidth eurothick louteurobox
+
+    % upper cross stroke
+    0 euroheight 2 div eurothick 0.5 mul add
+    eurostrokewidth eurostep 2 mul add eurothick louteurobox
+
+    % circular part
+    /eurohctr eurowidth euroheight 2 div eurotheta cos mul sub def
+    /eurovctr euroheight 2 div def
+    newpath
+    eurohctr eurovctr eurovctr eurotheta 350 eurotheta sub arc
+    eurohctr eurovctr eurovctr eurothick sub 365 eurotheta sub eurotheta arcn
+    closepath fill
+  end
+} def
+
+% path for @FullWidthRule symbol
+/LoutRule
+{ 0 0 moveto xsize 0 lineto
+} def
+
+% path for @Box symbol
+/LoutBox
+{ 0 0 moveto xsize 0 lineto
+  xsize ysize lineto 0 ysize lineto
+  closepath
+} def
+
+% path for @CurveBox symbol
+/LoutCurveBox
+{ xmark 0 moveto
+  xsize xmark sub xmark xmark 270 360 arc
+  xsize xmark sub ysize xmark sub xmark 0 90 arc
+  xmark ysize xmark sub xmark 90 180 arc
+  xmark xmark xmark 180 270 arc
+  closepath
+} def
+
+% path for @ShadowBox symbol
+/LoutShadowBox
+{ xmark 2 mul 0 moveto xsize 0 lineto
+  xsize ysize xmark 2 mul sub lineto
+  xsize xmark sub ysize xmark 2 mul sub lineto
+  xsize xmark sub xmark lineto
+  xmark 2 mul xmark lineto
+  closepath
+} def
+
+% set up dictionary containing margin note data: parity LoutMargSet -
+/LoutMargSet
+{ /LoutMargDict 12 dict def
+  LoutMargDict begin
+    /parity exch def
+    /matr matrix currentmatrix def
+    /rightx xsize def
+    /lefty ysize def   % highest allowable point for top of next left note
+    /righty ysize def  % highest allowable point for top of next right note
+    /max { 2 copy gt { pop } { exch pop } ifelse } def
+    /min { 2 copy lt { pop } { exch pop } ifelse } def
+  end
+} def
+
+%translate coordinate system for marginal notes:  type LoutMargShift -
+% where type 0 is left margin, 1 is right margin, 2 is outer, 3 is inner
+/LoutMargShift
+{ LoutMargDict begin
+
+    % y coordinate of top of note, in margin coords, before vertical adjust
+    0 ysize transform matr itransform exch pop
+
+    % decide whether left or right margin based on type and parity
+    exch [ 0 1 parity 1 parity sub ] exch get 0 eq
+    {
+      % left margin: adjust top of note downwards if overlaps previous note
+      lefty min
+
+      % bottom of note is new lefty position and also translate position
+      ysize sub dup /lefty exch def
+
+      % want right edge of note at coordinate zero
+      xsize neg exch
+    }
+    {
+      % right margin: adjust top of note downwards if overlaps previous note
+      righty min
+
+      % bottom of note is new righty position and also translate position
+      ysize sub dup /righty exch def
+
+      % want left edge of note at coordinate rightx
+      rightx exch
+    } ifelse
+
+    % stack now contains coord of bottom left corner in margin coordinates
+    matr setmatrix translate
+  end
+} def
+
+% create LoutPageDict with left, right, foot, top for @Place symbol users
+/LoutPageSet
+{
+  /LoutPageDict 5 dict def
+  LoutPageDict begin
+    /matr matrix currentmatrix def
+    /left 0 def
+    /right xsize def
+    /foot 0 def
+    /top ysize def
+  end
+
+} def
+
+%%EndResource
+
+%%BeginResource: procset LoutFigPrependGraphic
+% @PrependGraphic file /usr/lib/lout/include/figf.lpg
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+%  PostScript @SysPrependGraphic file for @Fig  Jeffrey H. Kingston  %
+%  Version 2.0 (includes CIRCUM label)                 January 1992  %
+%                                                                    %
+%  This file has been placed in the public domain by its author,     %
+%  Jeffrey H. Kingston                                               %
+%                                                                    %
+%  Although Fig is now obsolete I have updated it 20 October 2002    %
+%  to work with textures, i.e. replacing setrgbcolor with            %
+%  LoutSetRGBColor.                                                  %
+%                                                                    %
+%  To assist in avoiding name clashes, the names of all symbols      %
+%  defined here begin with "lfig".  However, this is not feasible    %
+%  with user-defined labels and some labels used by users.           %
+%                                                                    %
+%  <point>      is two numbers, a point.                             %
+%  <length>     is one number, a length                              %
+%  <angle>      is one number, an angle in degrees                   %
+%  <dashlength> is one number, the preferred length of a dash        %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+errordict begin
+   /handleerror
+   {
+      {  /Times-Roman findfont 8 pt scalefont setfont
+	 0 setgray 4 pt 4 pt moveto
+	 $error /errorname get
+	 dup lfigdict exch known
+	 { lfigdict exch get }
+	 { 30 string cvs } ifelse
+	 show
+	 (  Command: ) show
+	 $error /command get 30 string cvs show
+      } stopped {} if
+      showpage stop
+   } def
+end
+
+% concat strings: <string> <string> lfigconcat <string>
+% must be defined outside lfigdict since used in lfigpromotelabels
+/lfigconcat
+{ 2 copy length exch length add string
+  dup 0 4 index putinterval
+  dup 3 index length 3 index putinterval
+  3 1 roll pop pop
+} def
+
+% <string> lfigdebugprint -
+% must be defined outside lfigdict since used in arbitrary places
+% /lfigdebugprint
+% { print
+%   (;  operand stack:\n) print
+%   count copy
+%   count 2 idiv
+%   { ==
+%     (\n) print
+%   } repeat
+%   (\n) print
+% } def
+
+/lfigdict 120 dict def
+lfigdict begin
+
+% error messages
+/dictfull (dictfull error:  too many labels?) def
+/dictstackoverflow (dictstackoverflow error:  labels nested too deeply?) def
+/execstackoverflow (execstackoverflow error:  figure nested too deeply?) def
+/limitcheck (limitcheck error:  figure nested too deeply or too large?) def
+/syntaxerror (syntaxerror error:  syntax error in text of figure?) def
+/typecheck (typecheck error:  syntax error in text of figure?) def
+/undefined (undefined error:  unknown or misspelt label?) def
+/VMError (VMError error:  run out of memory?) def
+
+% push pi onto stack:  - lfigpi <num>
+/lfigpi 3.14159 def
+
+% arc directions
+/clockwise     false def
+/anticlockwise true  def
+
+% maximum of two numbers:  <num> <num> lfigmax <num>
+/lfigmax { 2 copy gt { pop } { exch pop } ifelse } def
+
+% minimum of two numbers:  <num> <num> lfigmin <num>
+/lfigmin { 2 copy lt { pop } { exch pop } ifelse } def
+
+% add two points:  <point> <point> lfigpadd <point>
+/lfigpadd { exch 3 1 roll add 3 1 roll add exch } def
+
+% subtract first point from second:  <point> <point> lfigpsub <point>
+/lfigpsub { 3 2 roll sub 3 1 roll exch sub exch } def
+
+% max two points:  <point> <point> lfigpmax <point>
+/lfigpmax { exch 3 1 roll lfigmax 3 1 roll lfigmax exch } def
+
+% min two points:  <point> <point> lfigpmin <point>
+/lfigpmin { exch 3 1 roll lfigmin 3 1 roll lfigmin exch } def
+
+% scalar multiplication: <point> <num> lfigpmul <point>
+/lfigpmul { dup 3 1 roll mul 3 1 roll mul exch } def
+
+% point at angle and distance:  <point> <length> <angle> lfigatangle <point>
+/lfigatangle { 2 copy cos mul 3 1 roll sin mul lfigpadd } def
+
+% angle from one point to another:  <point> <point> lfigangle <angle>
+/lfigangle { lfigpsub 2 copy 0 eq exch 0 eq and {pop} {exch atan} ifelse } def
+
+% distance between two points:  <point> <point> lfigdistance <length>
+/lfigdistance { lfigpsub dup mul exch dup mul add sqrt } def
+
+% difference in x coords: <point> <point> lfigxdistance <length>
+/lfigxdistance { pop 3 1 roll pop sub } def
+
+%difference in y coords: <point> <point> lfigydistance <length>
+/lfigydistance { 3 1 roll pop sub exch pop } def
+
+% stroke a solid line:  <length> <dashlength> lfigsolid -
+/lfigsolid
+{  pop pop [] 0 setdash stroke
+} def
+
+% stroke a lfigdashed line:   <length> <dashlength> lfigdashed -
+/lfigdashed
+{  2 copy div 2 le 1 index 0 le or
+   {  exch pop 1 pt lfigmax [ exch dup ] 0 setdash }
+   {  dup [ exch 4 2 roll 2 copy div
+      1 sub 2 div ceiling dup 4 1 roll
+      1 add mul sub exch div ] 0 setdash
+   } ifelse stroke
+} def
+
+% stroke a lfigcdashed line:  <length> <dashlength> lfigcdashed -
+/lfigcdashed
+{  2 copy le 1 index 0 le or
+   { exch pop 1 pt lfigmax [ exch dup ] dup 0 get 2 div setdash }
+   { dup [ 4 2 roll exch 2 copy exch div
+     2 div ceiling div 1 index sub
+     ] exch 2 div setdash
+   } ifelse stroke
+} def
+
+% stroke a dotted line:  <length> <dashlength> lfigdotted -
+/lfigdotted
+{  2 copy le 1 index 0 le or
+   { exch pop 1 pt lfigmax [ exch 0 exch ] 0 setdash }
+   { 1 index exch div ceiling div
+     [ 0 3 2 roll ] 0 setdash
+   } ifelse stroke
+} def
+
+% stroke a noline line:  <length> <dashlength> lfignoline -
+/lfignoline
+{ pop pop
+} def
+
+% painting (i.e. filling): - lfigwhite - (etc.)
+/lfignopaint		{			           } def
+/lfignochange		{ 			      fill } def
+/lfigdarkblue		{ 0.0 0.0 0.5 LoutSetRGBColor fill } def
+/lfigblue		{ 0.0 0.0 1.0 LoutSetRGBColor fill } def
+/lfiglightblue		{ 0.5 0.5 1.0 LoutSetRGBColor fill } def
+/lfigdarkgreen		{ 0.0 0.5 0.0 LoutSetRGBColor fill } def
+/lfiggreen		{ 0.0 1.0 0.0 LoutSetRGBColor fill } def
+/lfiglightgreen		{ 0.5 1.0 0.5 LoutSetRGBColor fill } def
+/lfigdarkred		{ 0.5 0.0 0.0 LoutSetRGBColor fill } def
+/lfigred		{ 1.0 0.0 0.0 LoutSetRGBColor fill } def
+/lfiglightred		{ 1.0 0.5 0.5 LoutSetRGBColor fill } def
+/lfigdarkcyan		{ 0.0 0.5 0.5 LoutSetRGBColor fill } def
+/lfigcyan		{ 0.0 1.0 1.0 LoutSetRGBColor fill } def
+/lfiglightcyan		{ 0.5 1.0 1.0 LoutSetRGBColor fill } def
+/lfigdarkmagenta	{ 0.5 0.0 0.5 LoutSetRGBColor fill } def
+/lfigmagenta		{ 1.0 0.0 1.0 LoutSetRGBColor fill } def
+/lfiglightmagenta	{ 1.0 0.5 1.0 LoutSetRGBColor fill } def
+/lfigdarkyellow		{ 0.5 0.5 0.0 LoutSetRGBColor fill } def
+/lfigyellow		{ 1.0 1.0 0.0 LoutSetRGBColor fill } def
+/lfiglightyellow	{ 1.0 1.0 0.5 LoutSetRGBColor fill } def
+/lfigdarkgray		{ 0.2 0.2 0.2 LoutSetRGBColor fill } def
+/lfiggray		{ 0.5 0.5 0.5 LoutSetRGBColor fill } def
+/lfiglightgray		{ 0.8 0.8 0.8 LoutSetRGBColor fill } def
+/lfigdarkgrey		{ 0.2 0.2 0.2 LoutSetRGBColor fill } def
+/lfiggrey		{ 0.5 0.5 0.5 LoutSetRGBColor fill } def
+/lfiglightgrey		{ 0.8 0.8 0.8 LoutSetRGBColor fill } def
+/lfigblack		{ 0.0 0.0 0.0 LoutSetRGBColor fill } def
+/lfigwhite		{ 1.0 1.0 1.0 LoutSetRGBColor fill } def
+
+% line caps (and joins, not currently used)
+/lfigbutt       0 def
+/lfiground      1 def
+/lfigprojecting 2 def
+/lfigmiter      0 def
+/lfigbevel      2 def
+
+% shape and labels of the @Box symbol
+/lfigbox
+{
+   0     0     /SW  lfigpointdef
+   xsize 0     /SE  lfigpointdef
+   xsize ysize /NE  lfigpointdef
+   0     ysize /NW  lfigpointdef
+   SE 0.5 lfigpmul /S   lfigpointdef
+   NW 0.5 lfigpmul /W   lfigpointdef
+   W SE lfigpadd   /E   lfigpointdef
+   S NW lfigpadd   /N   lfigpointdef
+   NE 0.5 lfigpmul /CTR lfigpointdef
+   [ CTR NE lfigpsub /lfigboxcircum cvx ] lfigcircumdef
+   SW SE NE NW SW
+} def
+
+% shape and labels of the @CurveBox symbol
+/lfigcurvebox
+{
+
+   xsize 0.5 mul	ysize 0.5 mul	/CTR lfigpointdef
+   xsize 0.5 mul	0		/S   lfigpointdef
+   xsize		ysize 0.5 mul	/E   lfigpointdef
+   xsize 0.5 mul	ysize		/N   lfigpointdef
+   0			ysize 0.5 mul	/W   lfigpointdef
+
+   xmark 0.293 mul		xmark 0.293 mul		  /SW  lfigpointdef
+   xsize xmark 0.293 mul sub	xmark 0.293 mul		  /SE  lfigpointdef
+   xsize xmark 0.293 mul sub	ysize xmark 0.293 mul sub /NE  lfigpointdef
+   xmark 0.293 mul		ysize xmark 0.293 mul sub /NW  lfigpointdef
+
+   [ xsize ysize 0.5 lfigpmul xmark /lfigcurveboxcircum cvx ] lfigcircumdef
+
+   xmark		0
+   xsize xmark sub	0
+   [ xsize xmark sub	xmark		]
+   xsize		xmark
+   xsize		ysize xmark sub
+   [ xsize xmark sub	ysize xmark sub	]
+   xsize xmark sub	ysize
+   xmark		ysize
+   [ xmark		ysize xmark sub	]
+   0			ysize xmark sub
+   0			xmark
+   [ xmark		xmark		]
+   xmark		0
+} def
+
+% shadow of the @ShadowBox symbol
+% its shape and labels are done, somewhat inaccurately, with lfigbox
+/lfigshadow
+{ xmark 2 mul 0 moveto xsize 0 lineto
+  xsize ysize xmark 2 mul sub lineto
+  xsize xmark sub ysize xmark 2 mul sub lineto
+  xsize xmark sub xmark lineto
+  xmark 2 mul xmark lineto closepath fill
+} def
+
+% shape and labels of the @Square symbol
+/lfigsquare
+{
+   xsize ysize 0.5 lfigpmul /CTR lfigpointdef
+   CTR xsize xsize ysize ysize lfigpmax 0.5 lfigpmul lfigpadd /NE lfigpointdef
+   CTR 0 0 CTR NE lfigdistance 135 lfigatangle lfigpadd /NW lfigpointdef
+   CTR 0 0 CTR NE lfigdistance 225 lfigatangle lfigpadd /SW lfigpointdef
+   CTR 0 0 CTR NE lfigdistance 315 lfigatangle lfigpadd /SE lfigpointdef
+   SW 0.5 lfigpmul SE 0.5 lfigpmul lfigpadd /S lfigpointdef
+   NW 0.5 lfigpmul NE 0.5 lfigpmul lfigpadd /N lfigpointdef
+   SW 0.5 lfigpmul NW 0.5 lfigpmul lfigpadd /W lfigpointdef
+   SE 0.5 lfigpmul NE 0.5 lfigpmul lfigpadd /E lfigpointdef
+   [ CTR NE lfigpsub /lfigboxcircum cvx ] lfigcircumdef
+   SW SE NE NW SW
+} def
+
+% shape and labels of the @Diamond symbol
+/lfigdiamond
+{
+   xsize 0 0.5 lfigpmul /S   lfigpointdef
+   0 ysize 0.5 lfigpmul /W   lfigpointdef
+   S W         lfigpadd /CTR lfigpointdef
+   CTR W       lfigpadd /N   lfigpointdef
+   CTR S       lfigpadd /E   lfigpointdef
+   [ xsize ysize 0.5 lfigpmul /lfigdiamondcircum cvx ] lfigcircumdef
+   S E N W S
+} def
+
+% shape and labels of the @Ellipse symbol
+/lfigellipse
+{
+   xsize 0 0.5 lfigpmul /S   lfigpointdef
+   0 ysize 0.5 lfigpmul /W   lfigpointdef
+   S W         lfigpadd /CTR lfigpointdef
+   CTR W       lfigpadd /N   lfigpointdef
+   CTR S       lfigpadd /E   lfigpointdef
+   CTR xsize 0 0.3536 lfigpmul lfigpadd 0 ysize 0.3536 lfigpmul lfigpadd /NE lfigpointdef
+   0 ysize 0.3536 lfigpmul CTR xsize 0 0.3536 lfigpmul lfigpadd lfigpsub /SE lfigpointdef
+   xsize 0 0.3536 lfigpmul CTR lfigpsub 0 ysize 0.3536 lfigpmul lfigpadd /NW lfigpointdef
+   0 ysize 0.3536 lfigpmul xsize 0 0.3536 lfigpmul CTR lfigpsub lfigpsub /SW lfigpointdef
+   [ xsize ysize 0.5 lfigpmul /lfigellipsecircum cvx ] lfigcircumdef
+   S [ CTR ] E [ CTR ] N [ CTR ] W [ CTR ] S
+} def
+
+% shape and labels of the @Circle symbol
+/lfigcircle
+{
+   xsize ysize 0.5 lfigpmul /CTR lfigpointdef
+   CTR xsize 0 ysize 0 lfigpmax 0.5 lfigpmul lfigpadd /E lfigpointdef
+   CTR 0 0 CTR E lfigdistance 45 lfigatangle lfigpadd /NE lfigpointdef
+   CTR 0 0 CTR E lfigdistance 90 lfigatangle lfigpadd /N lfigpointdef
+   CTR 0 0 CTR E lfigdistance 135 lfigatangle lfigpadd /NW lfigpointdef
+   CTR 0 0 CTR E lfigdistance 180 lfigatangle lfigpadd /W lfigpointdef
+   CTR 0 0 CTR E lfigdistance 225 lfigatangle lfigpadd /SW lfigpointdef
+   CTR 0 0 CTR E lfigdistance 270 lfigatangle lfigpadd /S lfigpointdef
+   CTR 0 0 CTR E lfigdistance 315 lfigatangle lfigpadd /SE lfigpointdef
+   [ S E lfigpsub /lfigellipsecircum cvx ] lfigcircumdef
+   S [ CTR ] E [ CTR ] N [ CTR ] W [ CTR ] S
+} def
+
+% shape and labels of the @HLine and @HArrow symbols
+/lfighline
+{
+   0 ymark lfigprevious /FROM lfigpointdef
+   xsize ymark lfigprevious /TO lfigpointdef
+} def
+
+% shape and labels of the @VLine and @VArrow symbols
+/lfigvline
+{
+   xmark ysize lfigprevious /FROM lfigpointdef
+   xmark 0 lfigprevious /TO lfigpointdef
+} def
+
+% points of a polygon around base with given no of sides, vert init angle:
+% <sides> <angle> figpolygon <point> ... <point>
+/lfigpolygon
+{  xsize ysize 0.5 lfigpmul /CTR lfigpointdef
+   90 sub CTR 2 copy lfigmax 5 3 roll
+   [ 4 copy pop /lfigpolycircum cvx ] lfigcircumdef
+   exch dup 360 exch div exch
+   1 1  3 2 roll
+   {  4 string cvs (P) exch lfigconcat cvn
+      6 copy pop pop lfigatangle 2 copy 10 2 roll
+      3 2 roll lfigpointdef
+      dup 3 1 roll add exch
+   }  for
+   pop lfigatangle
+} def
+
+% next array element:  <array> <index> lfiggetnext <array> <index> <any> true
+%                                               or <array> <index> false
+/lfiggetnext
+{  2 copy exch length ge
+   { false }
+   { 2 copy get exch 1 add exch true } ifelse
+} def
+
+% check whether thing is number:  <any> lfigisnumbertype <any> <bool>
+/lfigisnumbertype
+{  dup type dup
+   /integertype eq exch /realtype eq or
+} def
+
+% check whether thing is an array:  <any> lfigisarraytype <any> <bool>
+/lfigisarraytype { dup type /arraytype eq } def
+
+% get next item:  <array> <index> lfiggetnextitem <array> <index> 0
+%                                              or <array> <index> <array> 1
+%                                              or <array> <index> <point> 2
+/lfiggetnextitem
+{   lfiggetnext
+    {	lfigisarraytype
+	{   1
+	}
+	{   lfigisnumbertype
+	    {	3 1 roll
+		lfiggetnext
+		{   lfigisnumbertype
+		    {	4 3 roll exch  2
+		    }
+		    {	pop 3 2 roll pop  0
+		    } ifelse
+		}
+		{   3 2 roll pop  0
+		} ifelse
+	    }
+	    {	pop 0
+	    } ifelse
+	} ifelse
+    }
+    {	0
+    } ifelse
+} def
+
+% set arc path:  bool x1 y1  x2 y2  x0 y0  lfigsetarc  <angle> <angle> <dist>
+% the path goes from x1 y1 to x2 y2 about centre x0 y0,
+% anticlockwise if bool is true else clockwise.
+% The orientations of backwards pointing and forwards pointing
+% arrowheads are returned in the two angles, and
+% the length of the arc is returned in <dist>.
+/lfigsetarc
+{
+  20 dict begin
+     matrix currentmatrix 8 1 roll
+     2 copy translate 2 copy 8 2 roll
+     4 2 roll lfigpsub 6 2 roll lfigpsub
+     dup /y1 exch def dup mul /y1s exch def
+     dup /x1 exch def dup mul /x1s exch def
+     dup /y2 exch def dup mul /y2s exch def
+     dup /x2 exch def dup mul /x2s exch def
+
+     y1s y2s eq
+     {	-1
+     }
+     {	y1s x2s mul y2s x1s mul sub y1s y2s sub div
+     } ifelse
+     /da exch def
+
+     x1s x2s eq
+     {	-1
+     }
+     {	x1s y2s mul x2s y1s mul sub x1s x2s sub div
+     } ifelse
+     /db exch def
+
+     da 0 gt db 0 gt and
+     {	/LMax da sqrt db sqrt lfigmax def
+	/scalex da sqrt LMax div def
+	/scaley db sqrt LMax div def
+	scalex scaley scale
+	0 0 LMax
+	0 0 x1 scalex mul y1 scaley mul lfigangle
+	0 0 x2 scalex mul y2 scaley mul lfigangle
+	2 copy eq { 360 add } if
+	2 copy 8 2 roll
+	5 index { arc } { arcn } ifelse
+	2 index 1 index
+	{ 90 sub } { 90 add } ifelse
+	dup sin scaley mul exch cos scalex mul atan
+	2 index 2 index
+	{ 90 add } { 90 sub } ifelse
+	dup sin scaley mul exch cos scalex mul atan
+	5 2 roll  % res1 res2 ang1 ang2 anticlockwise
+	{ exch sub } { sub } ifelse
+	dup 0 le { 360 add } if  lfigpi mul LMax mul 180 div
+     }
+     {	0 0 x1 y1 lfigdistance 0 0 x2 y2 lfigdistance eq
+	0 0 x1 y1 lfigdistance 0 gt and
+	{	0 0
+		0 0 x1 y1 lfigdistance
+		0 0 x1 y1 lfigangle
+		0 0 x2 y2 lfigangle
+		2 copy eq { 360 add } if
+		2 copy 8 2 roll
+		5 index { arc } { arcn } ifelse
+		2 index 1 index
+		{ 90 sub } { 90 add } ifelse
+		2 index 2 index
+		{ 90 add } { 90 sub } ifelse
+		5 2 roll % res1 res2 ang1 ang2 clockwise
+		{ exch sub } { sub } ifelse
+		dup 0 le { 360 add } if lfigpi mul 0 0 x1 y1 lfigdistance mul 180 div
+	}
+	{	x2 y2 lineto pop
+		x2 y2 x1 y1 lfigangle
+		x1 y1 x2 y2 lfigangle
+		x1 y1 x2 y2 lfigdistance
+	} ifelse
+     } ifelse
+     4 -1 roll setmatrix
+   end
+} def
+
+% lfigsetcurve: set up a Bezier curve from x0 y0 to x3 y3
+% and return arrowhead angles and length of curve (actually 0)
+% x0 y0 x1 y1 x2 y2 x3 y3 lfigsetcurve <angle> <angle> <length>
+/lfigsetcurve
+{ 8 copy curveto pop pop
+  lfigangle
+  5 1 roll
+  4 2 roll lfigangle
+  exch
+  0
+} def
+
+% lfigpaintpath: paint a path of the given shape
+% /paint [ shape ] lfigpaintpath -
+/lfigpaintpath
+{
+  10 dict begin
+    0 newpath
+    /prevseen false def
+    /curveseen false def
+    { lfiggetnextitem
+      dup 0 eq { pop exit }
+      { 1 eq
+        { /curveseen true def
+	  /curve exch def
+	  curve length 0 eq { /curveseen false def } if
+        }
+        { /ycurr exch def
+	  /xcurr exch def
+	  prevseen
+	  { curveseen
+	    { curve length 4 eq
+	      { xprev yprev
+		curve 0 get curve 1 get
+		curve 2 get curve 3 get
+		xcurr ycurr
+		lfigsetcurve pop pop pop
+	      }
+	      { xprev yprev xcurr ycurr
+	        curve length 1 ge { curve 0 get } { 0 } ifelse
+	        curve length 2 ge { curve 1 get } { 0 } ifelse
+	        curve length 3 ge { curve 2 get } { true } ifelse
+	        7 1 roll
+	        lfigsetarc pop pop pop
+	      } ifelse
+	    }
+	    { xcurr ycurr lineto
+	    } ifelse
+	  }
+	  { xcurr ycurr moveto
+	  } ifelse
+	  /xprev xcurr def
+	  /yprev ycurr def
+	  /prevseen true def
+	  /curveseen false def
+        } ifelse
+      } ifelse
+    } loop pop pop cvx exec
+  end
+} def
+
+% stroke a path of the given shape in the given linestyle and dash length.
+% Return the origin and angle of the backward and forward arrow heads.
+% dashlength /linestyle [shape] lfigdopath  [<point> <angle>] [<point> <angle>] 
+/lfigdopath
+{
+  10 dict begin
+    0
+    /prevseen  false def
+    /curveseen false def
+    /backarrow []    def
+    /fwdarrow  []    def
+    {
+	lfiggetnextitem
+	dup 0 eq { pop exit }
+	{
+	    1 eq
+	    {	/curveseen true def
+		/curve exch def
+		curve length 0 eq { /prevseen false def } if
+	    }
+	    {	/ycurr exch def
+		/xcurr exch def
+		prevseen
+		{   newpath xprev yprev moveto
+		    curveseen
+		    {	curve length 4 eq
+			{   xprev yprev
+			    curve 0 get curve 1 get
+			    curve 2 get curve 3 get
+			    xcurr ycurr lfigsetcurve
+			}
+			{   xprev yprev xcurr ycurr
+			    curve length 1 ge { curve 0 get } { 0 } ifelse
+			    curve length 2 ge { curve 1 get } { 0 } ifelse
+			    curve length 3 ge { curve 2 get } { true } ifelse
+			    7 1 roll
+			    lfigsetarc
+			} ifelse
+		    }
+		    {	xcurr ycurr lineto
+			xcurr ycurr xprev yprev lfigangle dup 180 sub
+			xprev yprev xcurr ycurr lfigdistance
+		    } ifelse
+		    6 index 6 index cvx exec
+		    [ xprev yprev 5 -1 roll ]
+		    backarrow length 0 eq
+		    { /backarrow exch def }
+		    { pop } ifelse
+		    [ xcurr ycurr 4 -1 roll ] /fwdarrow exch def
+		} if
+		/xprev xcurr def
+		/yprev ycurr def
+		/prevseen true def
+		/curveseen false def
+	    } ifelse
+	} ifelse
+    } loop
+    pop pop pop pop
+    backarrow length 0 eq { [ 0 0 0 ] } { backarrow } ifelse
+    fwdarrow  length 0 eq { [ 0 0 0 ] } { fwdarrow  } ifelse
+  end
+} def
+
+% lfigdoarrow: draw an arrow head of given form
+% dashlength /lstyle /pstyle hfrac height width [ <point> <angle> ] lfigdoarrow -
+/lfigdoarrow
+{  matrix currentmatrix 8 1 roll
+   dup 0 get 1 index 1 get translate
+   2 get rotate
+   [ 2 index neg 2 index 0 0
+     3 index 3 index neg
+     1 index 10 index mul 0
+     7 index 7 index ]
+   4 1 roll pop pop pop
+   dup 3 1 roll
+   gsave lfigpaintpath grestore lfigdopath pop pop
+   setmatrix
+} def
+
+% arrow head styles
+/lfigopen     0.0 def
+/lfighalfopen 0.5 def
+/lfigclosed   1.0 def
+
+% stroke no arrows, forward, back, and both
+/lfignoarrow { pop pop pop pop pop pop pop pop                        } def
+/lfigforward { 7 -1 roll lfigdoarrow pop                              } def
+/lfigback    { 8 -2 roll pop lfigdoarrow                              } def
+/lfigboth    { 8 -1 roll 7 copy lfigdoarrow pop 7 -1 roll lfigdoarrow } def
+
+% lfigprevious: return previous point on path
+/lfigprevious
+{ lfigisnumbertype
+  { 2 copy }
+  { lfigisarraytype
+    { 2 index 2 index }
+    { 0 0 }
+    ifelse
+  } ifelse
+} def
+
+% label a point in 2nd top dictionary:  <point> /name lfigpointdef -
+/lfigpointdef
+{
+  % (Entering lfigpointdef) lfigdebugprint
+  [ 4 2 roll transform
+    /itransform cvx ] cvx
+    currentdict end
+    3 1 roll
+    % currentdict length currentdict maxlength lt
+    % { def }
+    % { exec moveto (too many labels) show stop }
+    % ifelse
+    def
+    begin
+  % (Leaving lfigpointdef) lfigdebugprint
+} def
+
+% promote labels from second top to third top dictionary
+% <string> lfigpromotelabels -
+/lfigpromotelabels
+{
+  % (Entering lfigpromotelabels) lfigdebugprint
+  currentdict end exch currentdict end
+  { exch 20 string cvs 2 index
+    (@) lfigconcat exch lfigconcat cvn exch def
+  } forall pop begin
+  % (Leaving lfigpromotelabels) lfigdebugprint
+} def
+
+% show labels (except CIRCUM): - lfigshowlabels -
+/lfigshowlabels
+{
+  % (Entering lfigshowlabels) lfigdebugprint
+  currentdict end
+    currentdict
+    { 1 index 20 string cvs (CIRCUM) search % if CIRCUM in key
+      { pop pop pop pop pop }
+      { pop cvx exec 2 copy
+        newpath 1.5 pt 0 360 arc
+        0 setgray fill
+        /Times-Roman findfont 8 pt scalefont setfont
+        moveto 0.2 cm 0.1 cm rmoveto 20 string cvs show
+      }
+      ifelse
+    } forall
+  begin
+  % (Leaving lfigshowlabels) lfigdebugprint
+} def
+
+% fix an angle to 0 <= res < 360:  <angle> lfigfixangle <angle>
+/lfigfixangle
+{
+  % (Entering lfigfixangle) lfigdebugprint
+  { dup 0 ge { exit } if
+    360 add
+  } loop
+  { dup 360 lt { exit } if
+    360 sub
+  } loop
+  % (Leaving lfigfixangle) lfigdebugprint
+} def
+
+% find point on circumference of box:  alpha a b lfigboxcircum x y
+/lfigboxcircum
+{
+  % (Entering lfigboxcircum) lfigdebugprint
+  4 dict begin
+    /b exch def
+    /a exch def
+    lfigfixangle /alpha exch def
+    0 0 a b lfigangle /theta exch def
+
+    % if alpha <= theta, return (a, a*tan(alpha))
+    alpha theta le
+    { a  a alpha sin mul alpha cos div }
+    {
+      % else if alpha <= 180 - theta, return (b*cot(alpha), b)
+      alpha 180 theta sub le
+      { b alpha cos mul alpha sin div  b }
+      {
+        % else if alpha <= 180 + theta, return (-a, -a*tan(alpha))
+        alpha 180 theta add le
+        { a neg  a neg alpha sin mul alpha cos div }
+        {
+	  % else if alpha <= 360 - theta, return (-b*cot(alpha), -b)
+	  alpha 360 theta sub le
+          { b neg alpha cos mul alpha sin div  b neg }
+	  {
+	    % else 360 - theta <= alpha, return (a, a*tan(alpha))
+	    a  a alpha sin mul alpha cos div
+	  } ifelse
+        } ifelse
+      } ifelse
+    } ifelse
+  end
+  % (Leaving lfigboxcircum) lfigdebugprint
+} def
+
+% find quadratic roots (assume a != 0): a b c lfigqroots x1 x2 2
+%                                                     or    x2 1
+%                                                     or       0
+/lfigqroots
+{
+  4 dict begin
+    /c exch def
+    /b exch def
+    /a exch def
+    /disc b b mul 4 a c mul mul sub def
+    disc 0 lt
+    { 0
+    }
+    { disc 0 eq
+      { b neg 2 a mul div
+	1
+      }
+      { b neg disc sqrt add 2 a mul div
+        b neg disc sqrt sub 2 a mul div
+	2
+      }
+      ifelse
+    }
+    ifelse
+  end
+} def
+
+% work our which quadrant: <angle> lfigquadrant <0-3>
+/lfigquadrant
+{ dup 90 lt
+  { pop 0
+  }
+  { dup 180 lt
+    { pop 1
+    }
+    { 270 lt
+      { 2
+      }
+      { 3
+      } ifelse
+    } ifelse
+  } ifelse
+} def
+
+% find curvebox circum, assuming upper right quadrant: alpha a b xmk lfigcb x y
+/lfigcb
+{
+  6 dict begin
+    /xmk exch def
+    /b exch def
+    /a exch def
+    /alpha exch def
+    /theta1 0 0 a b xmk sub lfigangle def
+    /theta2 0 0 a xmk sub b lfigangle def
+    alpha theta1 le
+    { % if alpha <= theta1, return (a, a*tan(alpha))
+      a  a alpha sin mul alpha cos div
+    }
+    { alpha theta2 ge
+      { % else if alpha > theta2, return (b*cot(alpha), b)
+	b alpha cos mul alpha sin div  b
+      }
+      {
+	% else, return the intersection of line and circle
+	a xmk sub b xmk sub xmk  0 0 alpha lfigcircleintersect
+	dup 0 eq
+	{ % should never happen, just return any reasonable point
+	  pop
+	  a b 0.5 lfigpmul
+	}
+	{ 1 eq
+	  { % should never happen, just return the point on top of stack
+	  }
+	  { % the usual case, two points on stack, return the larger
+	    lfigpmax
+	  } ifelse
+	} ifelse
+      } ifelse
+    } ifelse
+  end
+} def
+
+% find point on circumference of curvebox: alpha a b xmk lfigcurveboxcircum x y
+/lfigcurveboxcircum
+{
+  % (Entering lfigcurveboxcircum) lfigdebugprint
+  5 dict begin
+    /xmk exch def
+    /b exch def
+    /a exch def
+    lfigfixangle /alpha exch def
+
+    % work out which quadrant we are in, and reflect accordingly
+    /quad alpha lfigquadrant def
+    quad 0 eq
+    { alpha a b xmk lfigcb
+    }
+    { quad 1 eq
+      { 180 alpha sub a b xmk lfigcb exch neg exch
+      }
+      { quad 2 eq
+	{ alpha 180 sub a b xmk lfigcb neg exch neg exch
+	}
+	{ 360 alpha sub a b xmk lfigcb neg
+	} ifelse
+      } ifelse
+    } ifelse
+  end
+  % (Leaving lfigcurveboxcircum) lfigdebugprint
+} def
+
+% find point on circumference of diamond:  alpha a b lfigdiamondcircum x y
+/lfigdiamondcircum
+{
+  % (Entering lfigdiamondcircum) lfigdebugprint
+  4 dict begin
+    /b exch def
+    /a exch def
+    lfigfixangle /alpha exch def
+    b alpha cos abs mul  a alpha sin abs mul  add  /denom exch def
+    a b mul alpha cos mul denom div
+    a b mul alpha sin mul denom div
+  end
+  % (Leaving lfigdiamondcircum) lfigdebugprint
+} def
+
+% find point on circumference of ellipse:  alpha a b lfigellipsecircum x y
+/lfigellipsecircum
+{
+  % (Entering lfigellipsecircum) lfigdebugprint
+  4 dict begin
+    /b exch def
+    /a exch def
+    lfigfixangle /alpha exch def
+    b alpha cos mul dup mul  a alpha sin mul dup mul  add sqrt /denom exch def
+    a b mul alpha cos mul denom div
+    a b mul alpha sin mul denom div
+  end
+  % (Leaving lfigellipsecircum) lfigdebugprint
+} def
+
+% find point of intersection of two lines each defined by two points
+% x1 y1 x2 y2  x3 y3 x4 y4  lfiglineintersect x y
+/lfiglineintersect
+{
+  % (Entering lfiglineintersect) lfigdebugprint
+  13 dict begin
+    /y4 exch def
+    /x4 exch def
+    /y3 exch def
+    /x3 exch def
+    /y2 exch def
+    /x2 exch def
+    /y1 exch def
+    /x1 exch def
+    x2 x1 sub /x21 exch def
+    x4 x3 sub /x43 exch def
+    y2 y1 sub /y21 exch def
+    y4 y3 sub /y43 exch def
+    y21 x43 mul y43 x21 mul sub /det exch def
+  
+    % calculate x 
+    y21 x43 mul x1 mul
+    y43 x21 mul x3 mul sub
+    y3 y1 sub x21 mul x43 mul add
+    det div
+
+    % calculate y
+    x21 y43 mul y1 mul
+    x43 y21 mul y3 mul sub
+    x3 x1 sub y21 mul y43 mul add
+    det neg div
+
+  end
+  % (Leaving lfiglineintersect) lfigdebugprint
+} def
+
+% find point on circumference of polygon
+% alpha radius num theta lfigpolycircum x y
+/lfigpolycircum
+{
+  % (Entering lfigpolycircum) lfigdebugprint
+  13 dict begin
+    /theta exch def
+    /num exch def
+    /radius exch def
+    /alpha exch def
+
+    % calculate delta, the angle from theta to alpha
+    alpha theta sub lfigfixangle
+
+    % calculate the angle which is the multiple of 360/num closest to delta
+    360 num div div truncate 360 num div mul theta add /anglea exch def
+
+    % calculate the next multiple of 360/num after anglea
+    anglea 360 num div add /angleb exch def
+
+    % intersect the line through these two points with the alpha line
+    anglea cos anglea sin  angleb cos angleb sin
+    0 0  alpha cos 2 mul alpha sin 2 mul
+    lfiglineintersect radius lfigpmul
+
+  end
+  % (Leaving lfigpolycircum) lfigdebugprint
+} def
+
+% find point of intersection of a point and a circle
+% x0 y0 r  x1 y1 theta  lfigcircleintersect xa ya xb yb 2
+%                                        or       xb yb 1
+%                                        or             0
+/lfigcircleintersect
+{
+  % (Entering lfigcircleintersect) lfigdebugprint
+  15 dict begin
+    /theta exch def
+    /y1    exch def
+    /x1    exch def
+    /r     exch def
+    /y0    exch def
+    /x0    exch def
+
+    % if sin(theta) = 0 then line is horizontal and y must be y1
+    theta sin abs 0.00001 lt
+    { 
+      /a 1 def
+      /b -2 x0 mul def
+      /c x0 dup mul y1 y0 sub dup mul add r dup mul sub def
+      a b c lfigqroots dup
+      0 eq
+      { pop
+	0
+      }
+      { 1 eq
+	{ y1 1
+	}
+	{ y1 exch y1 2
+	} ifelse
+      } ifelse
+    }
+    {
+      /ct theta cos theta sin div def
+      /a ct ct mul 1 add def
+      /b ct x1 x0 sub mul y1 add y0 sub 2 mul def
+      /c x1 x0 sub dup mul y1 y0 sub dup mul add r dup mul sub def
+      a b c lfigqroots dup
+      0 eq
+      { pop
+	0
+      }
+      { 1 eq
+	{ y1 add /yb exch def
+	  yb y1 sub ct mul x1 add /xb exch def
+	  xb yb 1
+	}
+	{ y1 add /ya exch def
+	  ya y1 sub ct mul x1 add /xa exch def
+	  y1 add /yb exch def
+	  yb y1 sub ct mul x1 add /xb exch def
+	  xa ya xb yb 2
+	} ifelse
+      } ifelse
+    } ifelse
+  end
+  % (Leaving lfigcircleintersect) lfigdebugprint
+} def
+
+% add CIRCUM operator with this body:  <array> lfigcircumdef -
+/lfigcircumdef
+{   % (Entering lfigcircumdef) lfigdebugprint
+    /CIRCUM exch cvx
+    currentdict end
+    3 1 roll
+    % currentdict length currentdict maxlength lt
+    % { def }
+    % { exec moveto (too many labels) show stop }
+    % ifelse
+    def
+    begin
+    % (Leaving lfigcircumdef) lfigdebugprint
+} def
+
+end
+%%EndResource
+
+%%EndProlog
+
+%%BeginSetup
+%%BeginResource: encoding vec2
+/vec2 [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+/parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/quotesinglbase /quotedblbase /ellipsis /OE /oe /quotedblleft /quotedblright /fi
+/fl /endash /emdash /bullet /dagger /daggerdbl /florin /fraction
+/dotlessi /grave /acute /circumflex /tilde /macron /breve /dotaccent
+/dieresis /.notdef /ring /cedilla /.notdef /hungarumlaut /ogonek /caron
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis
+] def
+%%EndResource
+
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+%%EndSetup
+
+%%Page: 1 1
+%%BeginPageSetup
+%%PageResources: font Times-Roman
+%%+ font Times-Bold
+%%+ font Courier
+/pgsave save def
+%%IncludeResource: font Times-Roman
+/Times-Romanfnt1 vec2 /Times-Roman LoutRecode
+/fnt1 { /Times-Romanfnt1 LoutFont } def
+%%IncludeResource: font Times-Bold
+/Times-Boldfnt2 vec2 /Times-Bold LoutRecode
+/fnt2 { /Times-Boldfnt2 LoutFont } def
+%%IncludeResource: font Courier
+/Courierfnt3 vec2 /Courier LoutRecode
+/fnt3 { /Courierfnt3 LoutFont } def
+0.0500 dup scale 10 setlinewidth
+%%EndPageSetup
+
+gsave
+0 0 translate
+240 fnt1 0.0 0.0 0.0 LoutSetRGBColor LoutTextureSolid 12240 15840 0 15840 240 288 60 LoutGraphic
+gsave
+LoutPageSet
+grestore
+gsave
+0 0 translate
+1.0 1.0 1.0 LoutSetRGBColor 12240 15840 0 15840 240 288 60 LoutGraphic
+gsave
+LoutBox gsave 1.0 1.0 1.0 LoutSetRGBColor  fill grestore 0 cm setlinewidth stroke
+grestore
+gsave
+0 15840 translate
+0.0000 rotate
+gsave
+2016 -2016 translate
+0.0 0.0 0.0 LoutSetRGBColor
+8208 0 0 0 240 288 60 LoutGraphic
+gsave
+1 LoutMargSet
+grestore
+
+grestore
+gsave
+2016 -13824 translate
+0.0 0.0 0.0 LoutSetRGBColor 8208 11808 0 11808 240 288 60 LoutGraphic
+gsave
+1 LoutMargSet
+grestore
+gsave
+2660 11460 translate
+3.2000 3.2000 scale
+0 -54(Andrei)m 718(Ale)s 3(x)k 1234(Edell)s
+
+grestore
+gsave
+2987 10995 translate
+1.5999 1.5999 scale
+0 -54(U)m 168 fnt1 169(NIVERSITY)s 1108(OF)s 240 fnt1
+1381(W)s 168 fnt1 1605(A)s 18(TERLOO)k 240 fnt1
+2363(,)s 2470(B.)s 2734(M)s 168 fnt1 2941(A)s 18(TH)k
+
+grestore
+3593 10544(resume)m 4339(with)s 4821(pictures:)s 5683(link)s 2(edin.com/in/hugelung)k
+153 fnt1 8140 10633(\214)m 240 fnt1 5175 10209(latest)m 5738(project:)s
+6507(seenandheard.app)s 6624 9874(a@nugbase.com)m 6671 9539(hilo,)m 7150(ha)s 3(w)k 2(aii,)k
+7889(usa)s 6736 9221(\(650\))m 7303(743-2955)s gsave
+8491 11808 translate
+-90.0000 rotate
+gsave
+0 0 translate
+1.5999 1.5999 scale
+0 -54(S)m 168 fnt1
+118(OFTW)s 20(ARE)k 240 fnt1 964(W)s 168 fnt1
+1188(IZARD)s 
+grestore
+
+grestore
+gsave
+171 8508 translate
+90.0000 rotate
+gsave
+0 0 translate
+1.5999 1.5999 scale
+-623 -54(A)m 168 fnt1 -453(BOUT)s 
+grestore
+
+grestore
+240 fnt2
+0.0 0.0 0.5 LoutSetRGBColor 742 8453(7)m 929(y)s 2(ears)k 1538(at)s
+1809(Ev)s 2(er)k 3(note)k 240 fnt1 0.0 0.0 0.0 LoutSetRGBColor
+2730 8454(,)m 2849(writing:)s 3657(the)s 4017(shared)s 240 fnt2
+4711 8453(note)m 5217(editor)s 240 fnt1 5825 8454(,)m 240 fnt2
+5944 8453(r)m 4(ealtime)k 6857(collaboration)s 240 fnt1 742 8166(engine,)m
+1525(cross-platform)s 240 fnt2 3015 8165(electr)m 4(on)k 240 fnt1
+3927 8166(app,)m 240 fnt2 4418 8165(J)m 3(a)k 6(v)k 2(a)k
+240 fnt1 4983 8166(back)m 2(end,)k 240 fnt2 5925 8165(J)m 3(a)k 6(v)k 2(aScript/T)k 17(ypeScript)k
+240 fnt1 742 7878(web)m 1207(client,)s 1857(settings)s 2651(pages,)s
+3316(and)s 3733(partnership)s 4874(pages.)s 240 fnt2 5536 7877(I)m
+5698(w)s 2(on)k 6191(both)s 6724(company-wide)s 742 7589(hackathons)m
+240 fnt1 1906 7590(,)m 2005(g)s 1(a)k 4(v)k 3(e)k
+2497(board)s 3091(presentations,)s 4451(and)s 4846(w)s 2(ork)k 2(ed)k
+5610(closely)s 6332(with)s 6806(multiple)s 7649(CT)s 4(Os)k
+742 7302(on)m 1039(R&D)s 1610(projects)s 2417(for)s 240 fnt2
+2755 7301(Skitch)m 3460(/)s 3591(P)s 4(enultimate)k 4876(/)s
+5007(Editing)s 5820(F)s 6(eatur)k 4(es)k 0.0 0.0 0.5 LoutSetRGBColor
+742 6605(5)m 906(y)s 2(ears)k 1494(as)s 1752(CEO)s
+2314(at)s 2564(Nugbase)s 240 fnt1 0.0 0.0 0.0 LoutSetRGBColor 3438 6606(,)m
+3536(my)s 3887(successful)s 4915(softw)s 2(are)k 5782(startup,)s
+6530(with)s 240 fnt2 7003 6605(8)m 7167(employ)s 2(ees)k
+742 6317(+)m 915(4)s 1073(contractors)s 240 fnt1 2235 6318(,)m
+2326(pioneering)s 3386(in)s 3612(blockchain)s 240 fnt2 4703 6317(indexing)m
+5620(and)s 6045(on-)s 6366(chain)s 6963(interactions)s 240 fnt1
+8164 6318(.)m 742 6030(I)m 876(implemented)s 2181(one)s 2581(of)s
+2851(the)s 3197(\207rst)s 240 fnt2 3627 6029(NFTs)m 240 fnt1
+4251 6030(with)m 4732(Flo)s 6(werpatch:)k 6025(a)s 240 fnt2
+6190 6029(W)m 15(eb)k 240 fnt1 6704 6030(+)m 240 fnt2
+6891 6029(Go)m 7250(micr)s 4(oser)k 8(-)k 742 5741(vice)m
+1205(back)s 2(end)k 240 fnt1 2132 5742(massi)m 6(v)k 3(ely)k
+3143(multiplayer)s 4314(g)s 1(ame)k 4897(w)s 2(orld)k
+240 fnt2 5521 5741(W)m 15(ebGL)k 240 fnt1 6395 5742(engine)m
+7099(back)s 2(ed)k 7843(into)s 240 fnt2 742 5453(Google)m
+1516(Cloud)s 2197(K)s 3(uber)k 3(netes)k 240 fnt1
+3366 5454(,)m 3474(smart)s 4065(contracts)s 4979(in)s 240 fnt2
+5222 5453(Solidity)m 240 fnt1 6062 5454(for)m 6401(Gary)s 6934(V)s 26(ee')k 13(s)k
+7504(Dapper)s 742 5166(Dinos,)m 1427(and)s 240 fnt2 1837 5165(a)m
+2021(no)s 2(v)k 2(el)k 2623(metatransaction)s 4344(system)s
+240 fnt1 5096 5166(for)m 5440(embedding)s 6563(blockchain)s 7676(trans-)s
+742 4878(actions)m 1470(into)s 1895(QR)s 2287(codes,)s 2939(called)s
+3567(Redeemable.)s 4853(See:)s 220 fnt3 5304 4886(nugbase.com)m 240 fnt2
+0.0 0.0 0.5 LoutSetRGBColor 742 4191(Curr)m 4(ently)k 1852(ser)s 2(ving)k
+2686(as)s 2989(the)s 3399(CT)s 4(O)k 4002(at)s
+4297(Seen)s 4867(&)s 5151(Heard)s 240 fnt1 0.0 0.0 0.0 LoutSetRGBColor
+5797 4192(,)m 5940(leading)s 6733(a)s 6935(breakthrough)s 742 3904(therap)m 2(y)k
+1545(app)s 1978(that)s 2430(enables)s 3232(structured)s 240 fnt2
+4279 3903(peer)m 8(-)k 4790(to-)s 5057(peer)s 240 fnt1
+5600 3904(video)m 6219(calls)s 6741(to)s 7014(foster)s 7651(acti)s 6(v)k 3(e)k
+742 3616(listening.)m 1685(My)s 2088(leadership)s 3139(includes)s 4003(managing)s
+240 fnt2 5016 3615(GCP)m 5595(K)s 3(uber)k 3(netes)k
+6840(clusters)s 240 fnt1 7616 3616(,)m 7739(APIs)s 742 3328(designed)m
+1651(using)s 240 fnt2 2224 3327(Pr)m 4(otob)k 4(uf)k
+3206(&)s 3455(GRPC)s 240 fnt1 4125 3328(,)m 4233(spearheading)s
+5549(cross-)s 6108(platform)s 6991(app)s 7391(de)s 6(v)k 3(elop-)k
+742 3040(ment)m 1283(with)s 240 fnt2 1768 3039(Flutter)m 22(,)k
+240 fnt1 2578 3040(and)m 2985(designing)s 240 fnt2 3972 3039(W)m 15(ebR)k 9(TC)k
+240 fnt1 4988 3040(video)m 5576(streaming)s 6574(solutions)s 7492(that)s
+7914(en-)s 742 2752(sure)m 1196(seamless)s 2096(communication.)s 3688(See:)s
+220 fnt3 4139 2760(seenandheard.app)m gsave
+172 2136 translate
+90.0000 rotate
+gsave
+0 0 translate
+1.5999 1.5999 scale
+240 fnt1 -581 -54(S)m 168 fnt1
+-463(KILLS)s 
+grestore
+
+grestore
+240 fnt1 743 2082(Ja)m 4(v)k 6(aScript,)k
+1876(T)s 19(ypeScript,)k 3067(Python,)s 3895(Go,)s 743 1794(Ja)m 4(v)k 6(a,)k
+1252(Dart,)s 1769(Lua,)s 2235(C,)s 2488(C#,)s 2862(Shell,)s
+3446(Solidity)s 15(,)k 743 1506(UI/UX)m 1523(Graphic)s 2406(Design,)s
+3251(Landmark)s 743 1218(T)m 8(raining,)k 1665(CEO)s 2196(&)s
+2436(CT)s 4(O)k 2963(Experience)s 4715 2082(React,)m 5384(W)s 19(eb,)k
+5943(W)s 19(ebGL,)k 6820(Firebase,)s 7755(Flut-)s 4715 1794(ter)m 9(,)k
+5154(W)s 19(ebR)k 14(TC,)k 6236(Ethereum,)s 7363(Protob)s 4(uf)k
+4715 1506(&)m 4968(GRPC,)s 5715(Go)s 6075(Microservices,)s 7549(K)s 3(uber)k 4(-)k
+4715 1218(netes,)m 5313(Google)s 6074(Cloud)s 6718(Platform)s 1133 0 0 0 240 288 60 0 575 LoutGr2
+0 0 moveto xsize 0 lineto stroke
+grestore
+
+grestore
+122 fnt1
+0 380(\214)m 192 fnt1 63 310(This)m 444(resume)s 1041(w)s 1(as)k
+1378(programmed)s 2403(using)s 2861(Lout)s 3271(since)s 3709(2011)s
+4121(~ https://github)s 7(.com/Garoth/Resume)k 96 42(\(A)m 342(1991)s 754(alternati)s 4(v)k 2(e)k
+1600(to)s 1792(LaT)s 13(eX)k 2366(by)s 2602(Dr)s 10(.)k
+2876(Jef)s 4(fre)k 2(y)k 3443(H.)s 3664(Kingston)s
+4412(@)s 4615(The)s 4958(Uni)s 4(v)k 2(ersity)k
+5803(of)s 6019(Sydne)s 2(y\))k 
+grestore
+gsave
+2016 -13824 translate
+0.0 0.0 0.0 LoutSetRGBColor 0 0 0 0 240 288 60 LoutGraphic
+gsave
+1 LoutMargSet
+grestore
+
+grestore
+
+grestore
+
+grestore
+
+grestore
+
+pgsave restore
+showpage
+
+%%Page: 2 2
+%%BeginPageSetup
+%%PageResources: font Times-Roman
+%%+ font Courier
+%%+ font Times-Bold
+/pgsave save def
+%%IncludeResource: font Times-Roman
+/Times-Romanfnt1 vec2 /Times-Roman LoutRecode
+/fnt1 { /Times-Romanfnt1 LoutFont } def
+%%IncludeResource: font Courier
+/Courierfnt3 vec2 /Courier LoutRecode
+/fnt3 { /Courierfnt3 LoutFont } def
+%%IncludeResource: font Times-Bold
+/Times-Boldfnt2 vec2 /Times-Bold LoutRecode
+/fnt2 { /Times-Boldfnt2 LoutFont } def
+0.0500 dup scale 10 setlinewidth
+%%EndPageSetup
+gsave
+0 0 translate
+240 fnt1 0.0 0.0 0.0 LoutSetRGBColor LoutTextureSolid 12240 15840 0 15840 240 288 60 LoutGraphic
+gsave
+LoutPageSet
+grestore
+gsave
+0 0 translate
+1.0 1.0 1.0 LoutSetRGBColor 12240 15840 0 15840 240 288 60 LoutGraphic
+gsave
+LoutBox gsave 1.0 1.0 1.0 LoutSetRGBColor  fill grestore 0 cm setlinewidth stroke
+grestore
+gsave
+0 15840 translate
+0.0000 rotate
+gsave
+2016 -13235 translate
+0.0 0.0 0.0 LoutSetRGBColor
+8208 11219 0 11014 240 288 60 LoutGraphic
+gsave
+0 LoutMargSet
+grestore
+gsave
+166 11014 translate
+90.0000 rotate
+gsave
+0 0 translate
+1.5999 1.5999 scale
+-1699 -54(W)m 168 fnt1 -1475(ORK)s 240 fnt1 -1061(E)s
+168 fnt1 -918(XPERIENCE)s 
+grestore
+
+grestore
+gsave
+737 11014 translate
+1.2000 1.2000 scale
+0 -54(CT)m 4(O)k 527(@)s
+782(Seen)s 1304(&)s 1544(Heard)s gsave
+2366 -169 translate
+0.5 0.5 1.0 LoutSetRGBColor 1604 340 85 169 240 288 60 LoutGraphic
+gsave
+LoutCurveBox  stroke
+grestore
+gsave
+85 169 translate
+0.7998 0.7998 scale
+60 -54(Sep)m
+471(2023-Present)s 
+grestore
+
+grestore
+
+grestore
+1097 10385(Leading)m 1968(a)s 2168(ne)s 6(w)k
+2649(therap)s 2(y)k 3452(app)s 3885(that)s 4338(connects)s
+5260(users)s 5836(in)s 6113(structured)s 7160(video)s 7780(calls)s
+1097 10097(to)m 1362(foster)s 1992(acti)s 6(v)k 3(e)k
+2636(listening)s 3539(and)s 3969(feedback.)s 4963(Responsible)s 6216(for)s
+6581(GCP)s 7131(K)s 3(ubernetes)k 1097 9809(cluster)m 9(,)k
+1893(Flutter)s 2652(app)s 3113(for)s 3514(all)s 3869(platforms,)s
+4954(and)s 5420(peer)s 4(-)k 5895(to-)s 6149(peer)s
+6683(W)s 19(ebR)k 14(TC)k 7683(video)s 1097 9521(streaming)m
+220 fnt3 1097 9070(seenandheard.app)m gsave
+737 8350 translate
+1.2000 1.2000 scale
+240 fnt1 0 -54(CEO)m 531(@)s
+786(Nugbase)s gsave
+1860 -169 translate
+0.5 0.5 1.0 LoutSetRGBColor 1823 340 85 169 240 288 60 LoutGraphic
+gsave
+LoutCurveBox  stroke
+grestore
+gsave
+85 169 translate
+0.7998 0.7998 scale
+60 -54(Mar)m 518(2018-Aug)s 1543(2023)s
+
+grestore
+
+grestore
+
+grestore
+240 fnt1 1097 7721(F)m 3(ounded)k 2023(Nugbase,)s 3001(a)s
+3200(self-funded)s 4379(blockchain)s 5519(compan)s 3(y)k 6481(with)s
+6996(8)s 7196(emplo)s 2(yees)k 1097 7433(and)m 1501(4)s
+1675(contractors.)s 2840(Projects)s 3660(included:)s 240 fnt2 1097 6977(Flo)m 2(wer)k 2(patch:)k
+240 fnt1 2526 6978(An)m 2902(early)s 3459(Ethereum)s 4474(NFT)s
+5008(project)s 5757(with)s 6265(a)s 6457(multiplayer)s 7644(g)s 1(ame,)k
+1097 6690(custom)m 1882(engine,)s 2661(still-acti)s 6(v)k 3(e)k
+3748(community)s 15(,)k 4965(achie)s 6(ving)k 5976(NFT)s
+6518(sales)s 7068(of)s 7373(up)s 7700(to)s 7974(42)s
+1097 6402(ETH)m 1618(per)s 1983(card)s 240 fnt2 1097 6005(Dapper)m
+1954(Dinos:)s 240 fnt1 2688 6006(NFT)m 3224(project)s 3976(funded)s
+4728(by)s 5050(Gary)s 5611(V)s 26(ee,)k 6105(about)s
+6726(breeding)s 7645(dinos.)s 1097 5718(Implemented)m 2416(smart)s 3006(contracts,)s
+3975(NFTs,)s 4627(websites)s 5501(&)s 5741(tok)s 2(en)k
+6328(mechanics)s 240 fnt2 1097 5322(Redeemable:)m 240 fnt1 2480 5323(A)m
+2725(metatransactions)s 4396(system)s 5135(for)s 5488(embedding)s 6620(pri)s 6(v)k 6(ate)k
+7342(k)s 2(e)k 3(ys)k 7843(into)s 1097 5035(QR)m
+1510(codes,)s 2184(enabling)s 3082(ph)s 1(ysical)k 3955(NFTs,)s
+4628(which)s 5292(were)s 5833(gi)s 6(v)k 3(en)k
+6435(out)s 6822(at)s 7076(conferences)s 1097 4747(and)m 1501(shops)s
+220 fnt3 1097 4290(nugbase.com, flowerpatch.app, dapperdinos.com)m gsave
+737 3570 translate
+1.2000 1.2000 scale
+240 fnt1 0 -54(SP20)m 561(Cohort)s
+gsave
+1466 -169 translate
+0.5 0.5 1.0 LoutSetRGBColor 1723 340 85 169 240 288 60 LoutGraphic
+gsave
+LoutCurveBox  stroke
+grestore
+gsave
+85 169 translate
+0.7998 0.7998 scale
+60 -54(Jan)m 436(2020-Sep)s 1407(2020)s 
+grestore
+
+grestore
+
+grestore
+gsave
+737 3046 translate
+1.2000 1.2000 scale
+240 fnt1
+0 -54(@)m 255(Uni)s 6(v)k 3(ersity)k 1309(of)s
+1580(Berk)s 2(ele)k 3(y)k 2492(Blockchain)s 3639(Xcelerator)s
+
+grestore
+240 fnt1 1097 2492(Represented)m 2346(Nugbase)s 3249(in)s 3501(this)s
+3906(accelerator)s 5022(program,)s 5948(g)s 1(aining)k 6727(skills)s
+7291(in)s 7544(bizde)s 6(v)k 15(,)k 1097 2204(pitching,)m
+2041(and)s 2499(v)s 3(enture)k 3323(capitalist)s 4298(relations.)s
+5278(Collaborated)s 6625(with)s 7161(blockchain)s 1097 1916(teams)m 1705(and)s
+2109(industry)s 2947(leaders)s 3674(for)s 4012(10)s 4307(months)s
+220 fnt3 1097 1459(xcelerator.berkeley.edu/new-age-marketing-at-nugbase)m 
+grestore
+gsave
+2016 -13235 translate
+0.0 0.0 0.0 LoutSetRGBColor 0 0 0 0 240 288 60 LoutGraphic
+gsave
+0 LoutMargSet
+grestore
+
+grestore
+0.0 0.0 0.0 LoutSetRGBColor 2016 -13822(2.)m
+
+grestore
+
+grestore
+
+grestore
+
+pgsave restore
+showpage
+
+%%Page: 3 3
+%%BeginPageSetup
+%%PageResources: font Times-Roman
+%%+ font Times-Bold
+%%+ font Courier
+/pgsave save def
+%%IncludeResource: font Times-Roman
+/Times-Romanfnt1 vec2 /Times-Roman LoutRecode
+/fnt1 { /Times-Romanfnt1 LoutFont } def
+%%IncludeResource: font Times-Bold
+/Times-Boldfnt2 vec2 /Times-Bold LoutRecode
+/fnt2 { /Times-Boldfnt2 LoutFont } def
+%%IncludeResource: font Courier
+/Courierfnt3 vec2 /Courier LoutRecode
+/fnt3 { /Courierfnt3 LoutFont } def
+0.0500 dup scale 10 setlinewidth
+%%EndPageSetup
+gsave
+0 0 translate
+240 fnt1 0.0 0.0 0.0 LoutSetRGBColor LoutTextureSolid 12240 15840 0 15840 240 288 60 LoutGraphic
+gsave
+LoutPageSet
+grestore
+gsave
+0 0 translate
+1.0 1.0 1.0 LoutSetRGBColor 12240 15840 0 15840 240 288 60 LoutGraphic
+gsave
+LoutBox gsave 1.0 1.0 1.0 LoutSetRGBColor  fill grestore 0 cm setlinewidth stroke
+grestore
+gsave
+0 15840 translate
+0.0000 rotate
+gsave
+2016 -13234 translate
+0.0 0.0 0.0 LoutSetRGBColor
+8208 11218 0 11013 240 288 60 LoutGraphic
+gsave
+1 LoutMargSet
+grestore
+gsave
+480 11013 translate
+1.2000 1.2000 scale
+0 -54(Softw)m 2(are)k 916(Engineer)s 1839(@)s 2094(Ev)s 3(ernote)k
+gsave
+3190 -169 translate
+0.5 0.5 1.0 LoutSetRGBColor 1782 340 85 169 240 288 60 LoutGraphic
+gsave
+LoutCurveBox  stroke
+grestore
+gsave
+85 169 translate
+0.7998 0.7998 scale
+60 -54(Sep)m 472(2011-Mar)s 1489(2018)s 
+grestore
+
+grestore
+
+grestore
+840 10384(Joined)m
+1518(at)s 1744(the)s 2087(startup)s 2784(phase,)s 3430(w)s 2(on)k
+3893(both)s 4370(compan)s 3(y-wide)k 5840(hackathons,)s 7018(reshaped)s
+7920(the)s 840 10096(compan)m 3(y)k 1769(agenda,)s 2554(g)s 1(a)k 4(v)k 3(e)k
+3054(board)s 3657(presentations,)s 5026(and)s 5430(w)s 2(ork)k 2(ed)k
+6202(closely)s 6933(with)s 7416(multiple)s 840 9808(CT)m 4(Os)k
+1459(on)s 1756(special)s 2474(projects.)s 3334(Highlights:)s 240 fnt2
+840 9411(Uno)m 1321(Editor:)s 240 fnt1 2105 9412(wrote)m 2705(huge)s
+3227(parts)s 3742(of)s 4013(the)s 4361(cross-platform)s 5813(HTML)s
+6548(note)s 7016(editor)s 240 fnt2 840 9015(Realtime:)m 240 fnt1
+1875 9016(founded)m 2718(the)s 3066(real-time)s 3982(collaborati)s 6(v)k 3(e)k
+5276(editor)s 5893(team)s 240 fnt2 840 8667(Electr)m 4(on)k
+1768(A)s 6(pp:)k 240 fnt1 2321 8668(founded)m 3164(the)s
+3512(cross-platform)s 4964(client)s 5554(project)s 6277(to)s 6516(unify)s
+7075(codebase)s 240 fnt2 840 8272(Pr)m 4(ototypes:)k 240 fnt1
+2058 8273(ne)m 6(w)k 2505(UI/UX)s 3225(for)s 3563(Skitch)s
+4231(&)s 4471(Penultimate,)s 5719(intelligent)s 6747(editing)s 240 fnt2
+840 7876(W)m 15(ebsites:)k 240 fnt1 1864 7877(public)m 2519(f)s 2(acing)k
+3171(websites,)s 4104(settings)s 4889(pages,)s 5545(web)s 6000(client,)s
+6641(and)s 7049(partnerships)s 840 7589(lik)m 2(e)k 1252(Orange)s
+2012(France)s 2718(T)s 16(elecom)k gsave
+480 6851 translate
+1.2000 1.2000 scale
+0 -54(K)m 6(ernel)k
+699(/)s 827(Linux)s 1454(Products)s 2342(T)s 16(eam)k
+gsave
+3110 -169 translate
+0.5 0.5 1.0 LoutSetRGBColor 2101 341 85 169 240 288 60 LoutGraphic
+gsave
+LoutCurveBox  stroke
+grestore
+gsave
+85 169 translate
+0.7998 0.7998 scale
+60 -54(W)m 9(inter)k 774(2011,)s 1361(Uni)s 6(v)k 3(ersity)k
+
+grestore
+
+grestore
+
+grestore
+gsave
+480 6327 translate
+1.2000 1.2000 scale
+0 -54(@)m 255(W)s 9(ind)k 836(Ri)s 6(v)k 3(er)k
+1418(\(subsidiary)s 2534(of)s 2805(Intel\))s gsave
+3430 -24 translate
+0.5999 0.5999 scale
+0 -54(W)m 19(aterloo)k
+923(Emplo)s 2(yer)k 1924(Satisf)s 2(action:)k 3155(6/6)s
+
+grestore
+
+grestore
+840 5773(W)m 9(ind)k 1444(Ri)s 6(v)k 3(er)k
+2050(mak)s 2(es)k 2734(the)s 3106(realtime)s 3967(VxW)s 19(orks)k
+4953(operating)s 5933(system,)s 6728(used)s 7249(by)s 7567(N)s 8(ASA)k
+840 5485(missions)m 1715(for)s 2040(decades.)s 2888(I)s 3010(wrote)s
+3597(C)s 3796(code)s 4291(for)s 4616(a)s 4769(system)s
+5480(that)s 5885(allo)s 6(ws)k 6541(for)s 6866(tw)s 2(o-)k
+7291(w)s 2(ay)k 7728(com-)s 840 5197(munication)m 1962(between)s
+2805(dif)s 6(ferent)k 3669(virtual)s 4336(machines)s 5279(on)s
+5565(the)s 5902(same)s 6438(ph)s 1(ysical)k 7277(hardw)s 2(are.)k
+840 4909(This)m 1329(is)s 1553(done)s 2089(via)s 2455(shared)s
+3150(memory)s 4015(and)s 4433(aims)s 4949(to)s 5202(pro)s 3(vide)k
+5999(a)s 6179(Linux)s 6820(frontend)s 7702(to)s 7955(re-)s
+840 4621(altime)m 1494(VxW)s 19(orks)k 2459(applications.)s 3720(The)s
+4151(system)s 4877(includes)s 5727(threading,)s 6739(sock)s 2(ets,)k
+7551(careful)s 840 4333(memory)m 1685(management,)s 3008(k)s 2(ernel)k
+3651(modules,)s 4563(virtualization,)s 5937(and)s 6334(patches)s 7096(for)s
+7428(core)s 7888(lin-)s 840 4045(ux)m 1135(utilities)s 1901(such)s
+2397(as)s 220 fnt3 2647 4053(ps)m 240 fnt1 2971 4045(and)m
+220 fnt3 3375 4053(top)m gsave
+480 3332 translate
+1.2000 1.2000 scale
+240 fnt1 0 -54(W)m 19(eb)k
+486(App)s 952(in)s 1195(Google)s 1956(W)s 19(eb)k
+2442(T)s 19(oolkit)k gsave
+3367 -169 translate
+0.5 0.5 1.0 LoutSetRGBColor 2083 341 85 169 240 288 60 LoutGraphic
+gsave
+LoutCurveBox  stroke
+grestore
+gsave
+85 169 translate
+0.7998 0.7998 scale
+60 -54(Spring)m 751(2010,)s
+1338(Uni)s 6(v)k 3(ersity)k 
+grestore
+
+grestore
+
+grestore
+gsave
+480 2808 translate
+1.2000 1.2000 scale
+240 fnt1 0 -54(@)m
+255(GridCentric)s 1449(Inc.)s gsave
+1918 -24 translate
+0.5999 0.5999 scale
+0 -54(W)m 19(aterloo)k 923(Emplo)s 2(yer)k
+1924(Satisf)s 2(action:)k 3155(6/6)s 
+grestore
+
+grestore
+240 fnt1 840 2277(V)m 14(irtual)k
+1570(machine)s 2449(cluster)s 3159(management.)s 4498(Implemented)s 5830(a)s
+6010(web)s 6475(interf)s 2(ace)k 7376(for)s 7728(man-)s
+840 1989(aging)m 1439(the)s 1801(cluster)s 2512(of)s 2797(virtual)s
+3490(machines)s 4458(and)s 4876(their)s 5388(pri)s 6(v)k 6(ate)k
+6109(netw)s 2(ork,)k 7013(lik)s 2(e)k 7439(an)s
+7737(early)s 840 1701(v)m 3(ersion)k 1616(of)s 1906(K)s 3(ubernetes)k
+3061(or)s 3339(A)s 21(WS.)k 3972(Created)s 4792(graphics)s
+5671(for)s 6028(their)s 6543(wiki,)s 7094(and)s 7516(a)s
+7701(prod-)s 840 1413(uct)m 1192(logo)s 
+grestore
+gsave
+2016 -13234 translate
+0.0 0.0 0.0 LoutSetRGBColor 0 0 0 0 240 288 60 LoutGraphic
+gsave
+1 LoutMargSet
+grestore
+
+grestore
+0.0 0.0 0.0 LoutSetRGBColor
+2016 -13821(3.)m 
+grestore
+
+grestore
+
+grestore
+
+pgsave restore
+showpage
+
+%%Page: 4 4
+%%BeginPageSetup
+%%PageResources: font Times-Roman
+/pgsave save def
+%%IncludeResource: font Times-Roman
+/Times-Romanfnt1 vec2 /Times-Roman LoutRecode
+/fnt1 { /Times-Romanfnt1 LoutFont } def
+0.0500 dup scale 10 setlinewidth
+%%EndPageSetup
+gsave
+0 0 translate
+240 fnt1 0.0 0.0 0.0 LoutSetRGBColor LoutTextureSolid 12240 15840 0 15840 240 288 60 LoutGraphic
+gsave
+LoutPageSet
+grestore
+gsave
+0 0 translate
+1.0 1.0 1.0 LoutSetRGBColor 12240 15840 0 15840 240 288 60 LoutGraphic
+gsave
+LoutBox gsave 1.0 1.0 1.0 LoutSetRGBColor  fill grestore 0 cm setlinewidth stroke
+grestore
+gsave
+0 15840 translate
+0.0000 rotate
+gsave
+2016 -13235 translate
+0.0 0.0 0.0 LoutSetRGBColor
+8208 11219 0 11013 240 288 60 LoutGraphic
+gsave
+0 LoutMargSet
+grestore
+gsave
+720 11013 translate
+1.2000 1.2000 scale
+0 -54(Distrib)m 4(uted)k 1129(Job)s 1515(Queue)s 2196(Cluster)s
+gsave
+3126 -169 translate
+0.5 0.5 1.0 LoutSetRGBColor 2226 341 85 169 240 288 60 LoutGraphic
+gsave
+LoutCurveBox  stroke
+grestore
+gsave
+85 169 translate
+0.7998 0.7998 scale
+60 -54(Summer)m 930(2009,)s 1517(Uni)s 6(v)k 3(ersity)k
+
+grestore
+
+grestore
+
+grestore
+gsave
+720 10489 translate
+1.2000 1.2000 scale
+0 -54(@)m 255(Xandros)s 1117(Corp.)s gsave
+1760 -24 translate
+0.5999 0.5999 scale
+0 -54(W)m 19(aterloo)k
+923(Emplo)s 2(yer)k 1924(Satisf)s 2(action:)k 3155(5/6)s
+
+grestore
+
+grestore
+1080 9935(Designed)m 2036(and)s 2434(implemented)s 3733(a)s 3893(job)s
+4245(automation)s 5372(cluster)s 6062(in)s 6298(Python.)s 7075(This)s
+7544(system)s 1080 9647(manages)m 1964(compiling)s 2983(packages)s 3906(on)s
+4199(multiple)s 5047(serv)s 3(ers,)k 5822(o)s 3(v)k 3(er)k
+6297(the)s 6641(netw)s 2(ork.)k 7522(It)s 7723(is)s
+7928(ca-)s 1080 9359(pable)m 1642(of)s 1900(starting,)s 2710(stopping,)s
+3629(and)s 4021(monitoring)s 5124(remotely)s 6014(running)s 6799(jobs.)s
+7289(Addition-)s 1080 9071(ally)m 15(,)k 1534(it)s 1730(features)s
+2540(a)s 2710(custom)s 3465(netw)s 2(ork)k 4312(api,)s
+4715(and)s 5123(stores)s 5735(statistics)s 6611(\(lik)s 2(e)k
+7106(job)s 7469(runtime)s 1080 8783(a)m 4(v)k 3(erages\).)k
+gsave
+720 8045 translate
+1.2000 1.2000 scale
+0 -54(P)m 3(ackage)k 850(Automation,)s 2100(I18n)s gsave
+2776 -169 translate
+0.5 0.5 1.0 LoutSetRGBColor
+2101 341 85 169 240 288 60 LoutGraphic
+gsave
+LoutCurveBox  stroke
+grestore
+gsave
+85 169 translate
+0.7998 0.7998 scale
+60 -54(W)m 9(inter)k 774(2008,)s 1361(Uni)s 6(v)k 3(ersity)k
+
+grestore
+
+grestore
+
+grestore
+gsave
+720 7521 translate
+1.2000 1.2000 scale
+0 -54(@)m 255(Xandros)s 1117(Corp.)s gsave
+1760 -24 translate
+0.5999 0.5999 scale
+0 -54(W)m 19(aterloo)k
+923(Emplo)s 2(yer)k 1924(Rank:)s 2536(4/6)s 
+grestore
+
+grestore
+1080 6967(Xandros)m
+1942(b)s 4(uilt)k 2437(Linux)s 3064(distrib)s 4(utions.)k
+4360(I)s 4495(\207x)s 3(ed)k 5030(&)s 5270(impro)s 3(v)k 3(ed)k
+6240(the)s 6588(b)s 4(uild)k 7135(automation)s 1080 6679(frame)m 6(w)k 2(ork,)k
+2286(which)s 2988(w)s 2(as)k 3469(written)s 4262(in)s
+4565(shell)s 5131(scripts)s 5865(and)s 6329(Perl.)s 6877(Also)s
+7442(wrote)s 8102(a)s 1080 6391(system)m 1799(to)s 2033(\207nd)s
+2459(and)s 2858(mer)s 4(ge)k 3502(internationalization)s 5411(strings)s
+6094(across)s 6737(projects,)s 7594(sa)s 4(ving)k 1080 6103(translators')m
+2186(time)s gsave
+720 5415 translate
+1.2000 1.2000 scale
+0 -54(Database)m 932(Abstraction,)s 2154(DBus,)s 2807(UI)s
+gsave
+3295 -169 translate
+0.5 0.5 1.0 LoutSetRGBColor 2083 341 85 169 240 288 60 LoutGraphic
+gsave
+LoutCurveBox  stroke
+grestore
+gsave
+85 169 translate
+0.7998 0.7998 scale
+60 -54(Spring)m 751(2008,)s 1338(Uni)s 6(v)k 3(ersity)k
+
+grestore
+
+grestore
+
+grestore
+gsave
+720 4891 translate
+1.2000 1.2000 scale
+0 -54(@)m 255(V)s 26(ersaBank)k gsave
+1413 -24 translate
+0.5999 0.5999 scale
+0 -54(\(P)m 3(aci\207c)k
+779(&)s 1019(W)s 19(estern)k 1853(Bank)s 2420(of)s
+2691(Canada\))s 3537(W)s 19(aterloo)k 4460(Emplo)s 2(yer)k
+5461(Rank:)s 6073(6/6)s 
+grestore
+
+grestore
+1080 4360(W)m 19(ork)k 2(ed)k
+1891(on)s 2191(V)s 26(ersaple)k 3(x,)k 3242(a)s
+3411(database)s 4293(abstraction)s 5402(layer)s 13(.)k 5973(Re)s 6(wrote)k
+6836(part)s 7271(of)s 7545(a)s 7715(Db)s 4(us)k
+1080 4072(\(inter)m 4(-process)k 2461(communications)s 4116(system\))s 4931(implementation)s
+6510(for)s 6871(C#.)s 7278(Created)s 8102(a)s 1080 3784(database)m
+1959(management)s 3241(UI)s 3549(for)s 3887(V)s 26(ersaple)k 3(x)k
+gsave
+720 3046 translate
+1.2000 1.2000 scale
+0 -54(Database)m 932(Cleaning)s 1849(&)s 2089(Scripting)s gsave
+3198 -169 translate
+0.5 0.5 1.0 LoutSetRGBColor
+2310 341 85 169 240 288 60 LoutGraphic
+gsave
+LoutCurveBox  stroke
+grestore
+gsave
+85 169 translate
+0.7998 0.7998 scale
+60 -54(Summer)m 930(2006,)s 1517(Highschool)s 
+grestore
+
+grestore
+
+grestore
+gsave
+720 2522 translate
+1.2000 1.2000 scale
+0 -54(@)m 255(Adv)s 6(anced)k
+1278(Chemistry)s 2328(De)s 6(v)k 3(elopment)k 3668(Labs)s
+
+grestore
+1080 1968(Reor)m 4(g)k 1(anized)k 2366(lar)s 4(ge)k
+2920(portions)s 3780(of)s 4076(the)s 4449(compan)s 3(y')k 13(s)k
+5558(MSSQL)s 6438(database)s 7342(so)s 7633(that)s 8076(it)s
+1080 1680(w)m 2(as)k 1517(possible)s 2373(to)s 2628(look)s
+3131(further)s 3856(back)s 4385(into)s 4826(customer)s 5778(history)s 15(.)k
+6547(Wrote)s 7216(a)s 7398(program)s 1080 1392(that)m 1521(w)s 2(ould)k
+2199(tak)s 2(e)k 2674(data)s 3155(from)s 3702(hundreds)s
+4654(of)s 4948(commonly-structured)s 7087(e-mails)s 7864(and)s 1080 1104(put)m
+1446(the)s 1794(rele)s 6(v)k 6(ant)k 2611(information)s
+3796(into)s 4221(an)s 4504(SQL)s 5013(table)s 
+grestore
+gsave
+2016 -13235 translate
+0.0 0.0 0.0 LoutSetRGBColor
+0 0 0 0 240 288 60 LoutGraphic
+gsave
+0 LoutMargSet
+grestore
+
+grestore
+0.0 0.0 0.0 LoutSetRGBColor 2016 -13822(4.)m 
+grestore
+
+grestore
+
+grestore
+
+pgsave restore
+showpage
+
+%%Trailer
+%%DocumentNeededResources: font Times-Roman
+%%+ font Times-Bold
+%%+ font Courier
+%%DocumentSuppliedResources: procset LoutStartUp
+%%+  procset LoutBasicSetup
+%%+  procset LoutFigPrependGraphic
+%%+ encoding vec2
+%%Pages: 4
+%%EOF

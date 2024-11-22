@@ -74,7 +74,7 @@
         /0.8f 1.2 @Scale {"@" Wind River (subsidiary of Intel)} ~~ -0.1f @VShift 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}
     //1f |1.5f 0w @VShift{/0.1f Wind River makes the realtime VxWorks operating system, used by NASA missions for decades. I wrote C code for a system that allows for two-way communication between different virtual machines on the same physical hardware. This is done via shared memory and aims to provide a Linux frontend to realtime VxWorks applications. The system includes threading, sockets, careful memory management, kernel modules, virtualization, and patches for core linux utilities such as @F ps and @F top}
 
-    //2f 1.2 @Scale {Web Programming in Google Web Toolkit} ~~~~ @DateBox {Spring 2010, University}
+    //2f 1.2 @Scale {Web App in Google Web Toolkit} ~~~~ @DateBox {Spring 2010, University}
         /0.8f 1.2 @Scale {"@" GridCentric Inc.} ~~ -0.1f @VShift 0.6 @Scale{Waterloo Employer Satisfaction: 6"/"6}
     //1f |1.5f 0w @VShift{/0.1f Virtual machine cluster management. Implemented a web interface for managing the cluster of virtual machines and their private network, like an early version of Kubernetes or AWS. Created graphics for their wiki, and a product logo}
 
